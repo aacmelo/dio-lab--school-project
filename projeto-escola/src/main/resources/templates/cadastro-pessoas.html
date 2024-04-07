@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sistema de Administração Escolar</title>
+    <h2>Sistema de Administração Escolar</h2>
+</head>
+<body>
+<hr>
+<h3>Cadastro de Dados Pessoais</h3>
+<form th:object="${pessoa}" th:action="@{/novapessoa}" method="post">
+    <label>Digite o Nome:</label>
+    <input type="text" required name="nome" field="*{nome}"/>
+    <label>Digite o Telefone:</label>
+    <input type="text" required name="telefone" field="*{telefone}"/>
+    <label>Digite o E-mail:</label>
+    <input type="email" required name="email" field="*{email}"/>
+    <label>Digite o CPF:</label>
+    <input type="text" required name="cpf" field="*{cpf}"/><br><br>
+    <label>Digite o RG:</label>
+    <input type="text" required name="rg" field="*{rg}"/>
+    <label>Digite a Data de Nascimento:</label>
+    <input type="text" required name="dataNascimento" field="*{dataNascimento}"/>
+    <label>Digite o Cep:</label>
+    <input type="text" required name="cep" field="*{cep}"/>
+    <label>Digite o Endereço:</label>
+    <input type="text" required name="endereco" field="*{endereco}"/><br><br>
+    <label>Digite o Numero:</label>
+    <input type="text" required name="numero" field="*{numero}"/>
+    <label>Digite o Bairro:</label>
+    <input type="text" required name="bairro" field="*{bairro}"/>
+    <label>Digite a Cidade:</label>
+    <input type="text" required name="cidade" field="*{cidade}"/>
+    <label>Digite o Estado:</label>
+    <input type="text" required name="estado" field="*{estado}"/><br><br>
+    <button type="submit" title="Cadastrar Pessoa">Cadastrar Pessoa</button>
+    <button type="reset" title="Limpar Campos">Limpar Campos</button>
+    <br><br>
+    <hr>
+</form>
+<a th:href="@{/sistema}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
+</body>
+</html>
