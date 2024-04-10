@@ -1,42 +1,85 @@
 <!DOCTYPE>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Administração Escolar</title>
-    <h2>Sistema de Administração Escolar</h2>
+    <link th:href="@{/css/cadastro-pessoas.css}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<hr>
-<h3>Cadastro de Dados Pessoais</h3>
-<form th:object="${pessoa}" th:action="@{/novapessoa}" method="post">
-    <label>Digite o Nome:</label>
-    <input type="text" required name="nome" field="*{nome}"/>
-    <label>Digite o Telefone:</label>
-    <input type="text" required name="telefone" field="*{telefone}"/>
-    <label>Digite o E-mail:</label>
-    <input type="email" required name="email" field="*{email}"/>
-    <label>Digite o CPF:</label>
-    <input type="text" required name="cpf" field="*{cpf}"/><br><br>
-    <label>Digite o RG:</label>
-    <input type="text" required name="rg" field="*{rg}"/>
-    <label>Digite a Data de Nascimento:</label>
-    <input type="text" required name="dataNascimento" field="*{dataNascimento}"/>
-    <label>Digite o Cep:</label>
-    <input type="text" required name="cep" field="*{cep}"/>
-    <label>Digite o Endereço:</label>
-    <input type="text" required name="endereco" field="*{endereco}"/><br><br>
-    <label>Digite o Numero:</label>
-    <input type="text" required name="numero" field="*{numero}"/>
-    <label>Digite o Bairro:</label>
-    <input type="text" required name="bairro" field="*{bairro}"/>
-    <label>Digite a Cidade:</label>
-    <input type="text" required name="cidade" field="*{cidade}"/>
-    <label>Digite o Estado:</label>
-    <input type="text" required name="estado" field="*{estado}"/><br><br>
-    <button type="submit" title="Cadastrar Pessoa">Cadastrar Pessoa</button>
-    <button type="reset" title="Limpar Campos">Limpar Campos</button>
-    <br><br>
-    <hr>
-</form>
-<a th:href="@{/sistema}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
+<header>
+    <div>
+    <br><h2 class="cabecalho">Cadastro de Dados Pessoais</h2>
+    </div>
+</header>
+<main>
+<session>
+
+    <div th:if="${mensagem}">
+        <p><span th:text="${mensagem}"></span></p>
+    </div>
+    <div>
+        <form th:object="${pessoa}" th:action="@{/novapessoa}" method="post">
+            <div class="nome">
+                <label class="labelnome">Nome:</label><br>
+                <input type="text" class="inputnome" placeholder="Nome" required name="nome" field="*{nome}"/>
+            </div>
+            <div class="telefone">
+                <label class="labeltelefone">Telefone:</label><br>
+                <input type="text" class="inputtelefone" placeholder="Telefone" required name="telefone" field="*{telefone}"/><br>
+            </div>
+            <div class="email">
+                <label>E-mail:</label><br>
+                <input type="email" class="inputemail" placeholder="E-mail" required name="email" field="*{email}"/><br>
+            </div>
+            <div class="cpf">
+                <label>CPF:</label><br>
+                <input type="text" placeholder="CPF" required name="cpf" field="*{cpf}"/><br>
+            </div>
+            <div class="rg">
+                <label>RG:</label><br>
+                <input type="text" placeholder="RG" required name="rg" field="*{rg}"/>
+            </div>
+            <div class="nascimento">
+                <label>Data de Nascimento:</label><br>
+                <input type="text" placeholder="Dade de Nascimento" required name="dataNascimento" field="*{dataNascimento}"/>
+            </div>
+            <div class="cep">
+                <label>Cep:</label><br>
+                <input type="text" placeholder="Cep" required name="cep" field="*{cep}"/>
+            </div>
+            <div class="endereco">
+                <label>Endereço:</label><br>
+                <input type="text" class="inputendereco" placeholder="Endereço" required name="endereco" field="*{endereco}"/><br>
+            </div>
+            <div class="numero">
+                <label>Numero:</label><br>
+                <input type="text" placeholder="Numero" required name="numero" field="*{numero}"/>
+            </div>
+            <div class="bairro">
+                <label>Bairro:</label><br>
+                <input type="text" class="inputbairro" placeholder="Bairro" required name="bairro" field="*{bairro}"/>
+            </div>
+            <div class="cidade">
+                <label>Cidade:</label><br>
+                <input type="text" class="inputcidade" placeholder="Cidade" required name="cidade" field="*{cidade}"/>
+            </div>
+            <div class="estado">
+                <label>Estado:</label><br>
+                <input type="text" class="inputestado" placeholder="Estado" required name="estado" field="*{estado}"/>
+            </div>
+            <div class="buttonsalvar">
+                <button type="submit" title="Cadastrar Pessoa">Cadastrar Pessoa</button>
+            </div>
+            <div class="buttonlimpar">
+                <button type="reset" title="Limpar Campos">Limpar Campos</button>
+            </div>
+        </form>
+    </div>
+    <div class="buttonvoltar">
+        <a th:href="@{/sistema}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
+    </div>
+</session>
+</main>
 </body>
 </html>

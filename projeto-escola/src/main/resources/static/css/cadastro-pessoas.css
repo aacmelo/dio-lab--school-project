@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+.cabecalho{
+  font-size: 30px;
+  margin-left: 35%;
+  color: red;
+}
+.nome{
+  margin: 0px 100px;
+  .inputnome{
+  width: 355px;
+  }
+}
+.telefone{
+ margin: -40px 465px;
+ .inputtelefone{
+ width: 115px;
+ }
+}
+.email{
+ margin: -40px 590px;
+ .inputemail{
+ width: 350px;
+ }
+}
+.cpf{
+ margin: -40px 950px;
+}
+.rg{
+ margin: 70px 100px;
+}
+.nascimento{
+ margin: -110px 280px;
+}
+.cep{
+ margin: 70px 455px;
+}
+.endereco{
+ margin: -110px 630px;
+ .inputendereco{
+ width: 300px;
+ }
+}
+.numero{
+ margin: 70px 950px;
+}
+.bairro{
+ margin: -40px 100px;
+ .inputbairro{
+ width: 200px;
+ }
+}
+.cidade{
+ margin: -40px 330px;
+ .inputcidade{
+ width: 250px;
+ }
+}
+.estado{
+ margin: -40px 610px;
+ .inputestado{
+ width: 250px;
+ }
+}
+.buttonsalvar{
+ margin: 80px 100px;
+}
+.buttonlimpar{
+ margin: -100px 250px;
+}
+.buttonvoltar{
+ margin: 79px 390px;
+}
+
+
+

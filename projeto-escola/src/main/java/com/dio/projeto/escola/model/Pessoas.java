@@ -17,7 +17,6 @@ public class Pessoas {
     private Long IdPessoa;
 
     @NotBlank(message = "Informe o Nome para Realizar o Cadastro")
-    @Size(min = 25, message = "Digite o Nome Completo da Pessoa")
     @Column(name = "Nome", length = 100, nullable = false)
     private String nome;
 
