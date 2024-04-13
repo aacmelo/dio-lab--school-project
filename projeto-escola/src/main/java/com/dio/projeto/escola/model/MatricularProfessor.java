@@ -19,7 +19,7 @@ public class MatricularProfessor {
 
     @ManyToOne
     @JoinColumn(name = "nome_professor_id_pessoa")
-    private Pessoas nomeProfessor;
+    private Aluno nomeProfessor;
 
     @ManyToOne
     @JoinColumn(name = "materia_curso_id_curso")

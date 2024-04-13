@@ -1,0 +1,78 @@
+<!DOCTYPE>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sistema de Administração Escolar</title>
+   <link th:href="@{/css/consultar-aluno.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header>
+    <div>
+        <br><p><h2 class="cabecalho">Consultar Aluno</h2></p>
+    </div>
+</header>
+<main>
+    <section>
+        <div>
+        <form th:action="@{/consultar}" method="post">
+           <div class="nome">
+               <label class="labelnome">Digite o Nome do Aluno:</label><br>
+                   <input type="text" class="inputnome" placeholder="Nome" required name="nome"/>
+           </div>
+            <div class="tabela">
+                <table>
+                    <thead class="cabecalhotabela">
+                    <tr>
+                        <th>Id do Estudante</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                        <th>CPF</th>
+                        <th>RG</th>
+                        <th>Data de Nascimento</th>
+                        <th>CEP</th>
+                        <th>Endereço</th>
+                        <th>Numero</th>
+                        <th>Bairro</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                    </tr>
+                    </thead>
+                    <tbody class="corpotabela">
+                    <tr th:each="alunos : ${listaAlunos}">
+                        <td><span th:text="${alunos.IdAluno}"></span></td>
+                        <td><span th:text="${alunos.nome}"></span></td>
+                        <td><span th:text="${alunos.telefone}"></span></td>
+                        <td><span th:text="${alunos.email}"></span></td>
+                        <td><span th:text="${alunos.cpf}"></span></td>
+                        <td><span th:text="${alunos.rg}"></span></td>
+                        <td><span th:text="${alunos.dataNascimento}"></span></td>
+                        <td><span th:text="${alunos.cep}"></span></td>
+                        <td><span th:text="${alunos.endereco}"></span></td>
+                        <td><span th:text="${alunos.numero}"></span></td>
+                        <td><span th:text="${alunos.bairro}"></span></td>
+                        <td><span th:text="${alunos.cidade}"></span></td>
+                        <td><span th:text="${alunos.estado}"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="buttonconsultar">
+                <button type="submit" title="Realiza a Consulta do Aluno">Consultar Aluno</button>
+            </div>
+            <div class="buttonreset">
+                <button type="reset" title="Limpar Campo da Consulta">Limpar Campo</button>
+            </div>
+        </form>
+            <div class="buttonvoltar">
+                <a th:href="@{/sistema}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
+            </div>
+            <div class="buttonlistaralunos">
+                <a th:href="@{/consultar-aluno}"><button type="submit" title="Listar Todos Alunos">Listar Todos Alunos</button></a>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

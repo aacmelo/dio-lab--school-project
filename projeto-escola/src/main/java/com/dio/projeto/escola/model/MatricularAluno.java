@@ -20,7 +20,7 @@ public class MatricularAluno {
 
     @ManyToOne
     @JoinColumn(name = "nome")
-    private Pessoas nome;
+    private Aluno nome;
 
     @ManyToOne
     @JoinColumn(name = "nomeCurso")

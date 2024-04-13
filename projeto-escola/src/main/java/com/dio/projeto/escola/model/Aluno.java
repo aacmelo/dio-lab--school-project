@@ -4,19 +4,19 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
-import java.time.LocalDate;
 
 @Entity
-@Table(name = "tab_pessoas")
+@Table(name = "tab_aluno")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Pessoas {
+public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long IdPessoa;
+    private Long IdAluno;
 
     @NotBlank(message = "Informe o Nome para Realizar o Cadastro")
+    @Size(min = 25, message = "Digite no minino 25 Caracteres no Campo")
     @Column(name = "Nome", length = 100, nullable = false)
     private String nome;
 

@@ -1,0 +1,42 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+.cabecalho{
+   font-size: 30px;
+   margin-left: 45%;
+   color: red;
+}
+.nome{
+   margin: 0px 10px;
+   .inputnome{
+   width: 355px;
+   }
+}
+.tabela{
+ margin: 10px 10px;
+ text-align: center;
+ background-color: black;
+ color: white;
+}
+.tabela, th, tr{
+ border: 2px solid white;
+ border-collapse: collapse;
+ padding: 5px 10px;
+ font-size: 12px;
+ text-align: center;
+}
+.buttonconsultar{
+ margin: 10px 10px;
+}
+.buttonreset{
+ margin: -30px 150px;
+}
+.buttonlistaralunos{
+ margin: 13px 280px;
+}
+.buttonvoltar{
+ margin: -35px 440px;
+}

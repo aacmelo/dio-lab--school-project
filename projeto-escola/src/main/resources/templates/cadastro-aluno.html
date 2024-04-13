@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Administração Escolar</title>
-    <link th:href="@{/css/cadastro-pessoas.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/css/cadastro-aluno.css}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <header>
     <div>
-    <br><h2 class="cabecalho">Cadastro de Dados Pessoais</h2>
+    <br><h2 class="cabecalho">Cadastro de Aluno</h2>
     </div>
 </header>
 <main>
-<session>
-
+<section>
     <div th:if="${mensagem}">
         <p><span th:text="${mensagem}"></span></p>
     </div>
     <div>
-        <form th:object="${pessoa}" th:action="@{/novapessoa}" method="post">
+        <form th:object="${aluno}" th:action="@{/novoaluno}" method="post">
             <div class="nome">
-                <label class="labelnome">Nome:</label><br>
+                <label>Nome:</label><br>
                 <input type="text" class="inputnome" placeholder="Nome" required name="nome" field="*{nome}"/>
             </div>
             <div class="telefone">
@@ -69,7 +68,7 @@
                 <input type="text" class="inputestado" placeholder="Estado" required name="estado" field="*{estado}"/>
             </div>
             <div class="buttonsalvar">
-                <button type="submit" title="Cadastrar Pessoa">Cadastrar Pessoa</button>
+                <button type="submit" title="Cadastrar Aluno">Cadastrar Aluno</button>
             </div>
             <div class="buttonlimpar">
                 <button type="reset" title="Limpar Campos">Limpar Campos</button>
@@ -79,7 +78,7 @@
     <div class="buttonvoltar">
         <a th:href="@{/sistema}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
     </div>
-</session>
+</section>
 </main>
 </body>
 </html>
