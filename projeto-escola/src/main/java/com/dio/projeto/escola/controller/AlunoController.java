@@ -1,13 +1,13 @@
 package com.dio.projeto.escola.controller;
 
+import com.dio.projeto.escola.exception.AlunoNotFoundException;
 import org.springframework.ui.Model;
 import com.dio.projeto.escola.model.Aluno;
 import com.dio.projeto.escola.service.AlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.List;
 
@@ -28,12 +28,14 @@ public class AlunoController {
     }
 
     @GetMapping("/cadastro-aluno")
-    public String cadastrarAluno(){
+    public String novoAluno(Model model){
+        Aluno aluno = new Aluno();
+        model.addAttribute("novoAluno", aluno);
         return "/cadastro-aluno";
     }
 
     @PostMapping("/novoaluno")
-    public String novoAluno(Aluno aluno , RedirectAttributes attributes){
+    public String salvarAluno(@ModelAttribute("novoAluno") Aluno aluno , RedirectAttributes attributes){
         alunoService.saveAluno(aluno);
         attributes.addFlashAttribute("mensagem","Cadastro Realizado com Sucesso");
         return "redirect:/cadastro-aluno";
@@ -54,5 +56,15 @@ public class AlunoController {
         List<Aluno> alunos = alunoService.consultarAlunoPorNome(nome);
         model.addAttribute("listaAlunos",alunos);
         return "/consultar-aluno";
+    }
+
+    @DeleteMapping("/apagar/{id}")
+    public String apagarAluno(@PathVariable("id") Long id, RedirectAttributes attributes){
+        try {
+            alunoService.apagarAluno(id);
+        } catch (AlunoNotFoundException e) {
+           attributes.addFlashAttribute("mensagemErro",e.getMessage());
+        }
+        return"/";
     }
 }

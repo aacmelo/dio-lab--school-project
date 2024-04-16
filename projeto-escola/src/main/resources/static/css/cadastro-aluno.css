@@ -6,8 +6,11 @@ body {
 }
 .cabecalho{
   font-size: 30px;
-  margin-left: 35%;
+  margin-left: 40%;
   color: red;
+}
+.divformulario{
+ margin: 0px 50px;
 }
 .nome{
   margin: 0px 100px;
@@ -73,8 +76,7 @@ body {
  margin: -100px 250px;
 }
 .buttonvoltar{
- margin: 79px 390px;
+ margin: 79px 450px;
 }
-
 
 

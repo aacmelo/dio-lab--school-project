@@ -17,8 +17,8 @@
     <div th:if="${mensagem}">
         <p><span th:text="${mensagem}"></span></p>
     </div>
-    <div>
-        <form th:object="${aluno}" th:action="@{/novoaluno}" method="post">
+    <div class="divformulario">
+        <form th:object="${novoAluno}" th:action="@{/novoaluno}" method="post">
             <div class="nome">
                 <label>Nome:</label><br>
                 <input type="text" class="inputnome" placeholder="Nome" required name="nome" field="*{nome}"/>
