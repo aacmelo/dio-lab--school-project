@@ -19,12 +19,12 @@ public class AlunoController {
 
     @GetMapping("/")
     public String telaSistema(){;
-        return "/sistema";
+        return "/cadastro-aluno";
     }
 
     @GetMapping("/sistema")
     public String voltarSistema(){
-        return "/sistema";
+        return "/cadadtro-aluno";
     }
 
     @GetMapping("/cadastro-aluno")

@@ -7,14 +7,23 @@
    <link th:href="@{/css/consultar-aluno.css}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<header>
+<header class="header">
     <div>
-        <br><p><h2 class="cabecalho">Consultar Aluno</h2></p>
+        <br><p><h2 class="consultarAluno">Consultar Aluno</h2></p>
     </div>
 </header>
 <main>
-    <section>
-        <div>
+    <div class="principal">
+        <aside class="aside">
+            <div class="button">
+                <a th:href="@{cadastro-aluno}"><button type="submit" title="Cadastrar Aluno">Cadastrar</button></a></a><br><br>
+                <a th:href="@{consultar-aluno}"><button type="submit" title="Consultar Aluno">Consultar</button></a><br><br>
+                <button type="submit" title="Atualizar Aluno">Atualizar</button><br><br>
+                <button type="submit" title="Deletar Aluno">Deletar</button><br><br>
+            </div>
+        </aside>
+    <section class="section">
+        <div class="divformulario">
         <form th:action="@{/consultar}" method="post">
            <div class="nome">
                <label class="labelnome">Digite o Nome do Aluno:</label><br>
@@ -66,7 +75,7 @@
             </div>
         </form>
             <div class="buttonvoltar">
-                <a th:href="@{/sistema}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
+                <a th:href="@{/cadastro-aluno}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
             </div>
             <div class="buttonlistaralunos">
                 <a th:href="@{/consultar-aluno}"><button type="submit" title="Listar Todos Alunos">Listar Todos Alunos</button></a>
@@ -74,5 +83,9 @@
         </div>
     </section>
 </main>
+<footer class="footer">
+    <div>
+    </div>
+</footer>
 </body>
 </html>

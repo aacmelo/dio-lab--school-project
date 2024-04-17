@@ -1,82 +1,132 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  color: white;
+body{
+ border: 2px solid white;
+ margin: 0px;
+ padding: 0px;
+ background-color: black;
+ color: black;
+ height: 608px;
 }
-.cabecalho{
-  font-size: 30px;
-  margin-left: 40%;
-  color: red;
+.principal{
+ width: 100%;
+ margin: 0 auto;
+ display: grid;
+ grid-template-rows: repeat(5, 50px);
+ grid-template-columns: 1% 89%;
+ grid-template-areas: "header header header"
+                      "aside section"
+                      "footer footer";
+ row-gap: 1px;
+ column-gap: 1px;
+}
+.header{
+   grid-area: header;
+   margin: 1%;
+   width: 1295px;
+   height: 100px;
+   border: 1px solid white;
+   background-color: #151515;
+}
+.cadastroAluno{
+   margin: 0px 500px;
+   color: #00FFFF;
+}
+.aside{
+   grid-area: aside;
+   margin: -250px -1245px;
+   text-align: center;
+   width: 85px;
+   height: 400px;
+   background-color: #0B0B3B;
+   border: 1px solid white;
+}
+.button{
+  margin: 30px 5px;
+}
+.section{
+   grid-area: section;
+   margin: -250px -1150px;
+   width: 1200px;
+   height: 400px;
+   background-color: black;
+   color: white;
+   border: 1px solid white;
+}
+.footer{
+   grid-area: footer;
+   display: flex;
+   justify-content: space-evenly;
+   margin: 13% 1%;
+   width: 1295px;
+   height: 40px;
+   background-color: #240B3B;
+   border: 1px solid white;
 }
 .divformulario{
- margin: 0px 50px;
+ margin: 10px 35px;
 }
 .nome{
-  margin: 0px 100px;
+  margin: 0px -30px;
   .inputnome{
   width: 355px;
   }
 }
 .telefone{
- margin: -40px 465px;
+ margin: -40px 340px;
  .inputtelefone{
  width: 115px;
  }
 }
 .email{
- margin: -40px 590px;
+ margin: -40px 470px;
  .inputemail{
  width: 350px;
  }
 }
 .cpf{
- margin: -40px 950px;
+ margin: -40px 840px;
 }
 .rg{
- margin: 70px 100px;
+ margin: 60px -30px;
 }
 .nascimento{
- margin: -110px 280px;
+ margin: -100px 150px;
 }
 .cep{
- margin: 70px 455px;
+ margin: 60px 330px;
 }
 .endereco{
- margin: -110px 630px;
+ margin: -100px 510px;
  .inputendereco{
  width: 300px;
  }
 }
 .numero{
- margin: 70px 950px;
+ margin: 60px 840px;
 }
 .bairro{
- margin: -40px 100px;
+ margin: -40px -30px;
  .inputbairro{
  width: 200px;
  }
 }
 .cidade{
- margin: -40px 330px;
+ margin: -40px 200px;
  .inputcidade{
  width: 250px;
  }
 }
 .estado{
- margin: -40px 610px;
+ margin: -40px 480px;
  .inputestado{
  width: 250px;
  }
 }
 .buttonsalvar{
- margin: 80px 100px;
+ margin: 80px -30px;
 }
 .buttonlimpar{
- margin: -100px 250px;
+ margin: -100px 100px;
 }
 .buttonvoltar{
- margin: 79px 450px;
+ margin: 79px 310px;
 }
-
-
