@@ -24,7 +24,7 @@ public class AlunoController {
 
     @GetMapping("/sistema")
     public String voltarSistema(){
-        return "/cadadtro-aluno";
+        return "/cadastro-aluno";
     }
 
     @GetMapping("/cadastro-aluno")
@@ -54,8 +54,25 @@ public class AlunoController {
             return "redirect:/consultar-aluno";
         }
         List<Aluno> alunos = alunoService.consultarAlunoPorNome(nome);
-        model.addAttribute("listaAlunos",alunos);
+        model.addAttribute("listaAlunos", alunos);
         return "/consultar-aluno";
+    }
+
+    @GetMapping("/deletar-aluno")
+    public String deletarAluno(Model model){
+        List<Aluno> alunos = alunoService.consultarTodosAlunos();
+        model.addAttribute("listaAlunos", alunos);
+        return "/deletar-aluno";
+    }
+
+    @PostMapping("/deletar")
+    public String consultarAluno(@Param("nome") Model model, String nome){
+        if(nome == null){
+            return "redirect:/deletar-aluno";
+        }
+        List<Aluno> alunos = alunoService.consultarAlunoPorNome(nome);
+        model.addAttribute("listaAlunos", alunos);
+        return "/deletar-aluno";
     }
 
     @DeleteMapping("/apagar/{id}")

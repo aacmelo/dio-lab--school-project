@@ -19,7 +19,7 @@
                 <a th:href="@{cadastro-aluno}"><button type="submit" title="Cadastrar Aluno">Cadastrar</button></a></a><br><br>
                 <a th:href="@{consultar-aluno}"><button type="submit" title="Consultar Aluno">Consultar</button></a><br><br>
                 <button type="submit" title="Atualizar Aluno">Atualizar</button><br><br>
-                <button type="submit" title="Deletar Aluno">Deletar</button><br><br>
+                <a th:href="@{deletar-aluno}"><button type="submit" title="Deletar Aluno">Deletar</button></a><br><br>
             </div>
         </aside>
     <section class="section">
@@ -27,7 +27,7 @@
         <form th:action="@{/consultar}" method="post">
            <div class="nome">
                <label class="labelnome">Digite o Nome do Aluno:</label><br>
-                   <input type="text" class="inputnome" placeholder="Nome" required name="nome"/>
+               <input type="text" class="inputnome" placeholder="Nome" required name="nome"/>
            </div>
             <div class="tabela">
                 <table>
@@ -48,7 +48,7 @@
                         <th>Estado</th>
                     </tr>
                     </thead>
-                    <tbody class="corpotabela">
+                    <tbody>
                     <tr th:each="alunos : ${listaAlunos}">
                         <td><span th:text="${alunos.IdAluno}"></span></td>
                         <td><span th:text="${alunos.nome}"></span></td>
@@ -74,14 +74,15 @@
                 <button type="reset" title="Limpar Campo da Consulta">Limpar Campo</button>
             </div>
         </form>
-            <div class="buttonvoltar">
-                <a th:href="@{/cadastro-aluno}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
-            </div>
-            <div class="buttonlistaralunos">
-                <a th:href="@{/consultar-aluno}"><button type="submit" title="Listar Todos Alunos">Listar Todos Alunos</button></a>
-            </div>
+        </div>
+        <div class="buttonlistaralunos">
+            <a th:href="@{/consultar-aluno}"><button type="submit" title="Listar Todos Alunos">Listar Todos Alunos</button></a>
+        </div>
+        <div class="buttonvoltar">
+            <a th:href="@{/cadastro-aluno}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
         </div>
     </section>
+    </div>
 </main>
 <footer class="footer">
     <div>
