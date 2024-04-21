@@ -75,13 +75,13 @@ public class AlunoController {
         return "/deletar-aluno";
     }
 
-    @DeleteMapping("/apagar/{id}")
-    public String apagarAluno(@PathVariable("id") Long id, RedirectAttributes attributes){
+    @PostMapping("/apagar/{id}")
+    public String apagarAluno(Long id, RedirectAttributes attributes){
         try {
             alunoService.apagarAluno(id);
         } catch (AlunoNotFoundException e) {
            attributes.addFlashAttribute("mensagemErro",e.getMessage());
         }
-        return"/";
+        return"redirect:/deletar-aluno";
     }
 }

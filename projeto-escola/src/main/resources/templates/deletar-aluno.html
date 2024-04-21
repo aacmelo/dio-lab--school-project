@@ -83,10 +83,10 @@
             </div>
         </section>
         <div class="formid">
-            <form action="#" method="post">
+            <form th:action="@{/apagar/{id}}" method="post">
                 <div>
                     <label>Id:</label><br>
-                    <input type="text" placeholder="ID" required name="id"/>
+                    <input type="text" placeholder="ID" required name="id" field="*{id}"/>
                 </div>
                 <div class="buttondeletar">
                     <button type="submit" title="Deletar Aluno">Deletar</button>
