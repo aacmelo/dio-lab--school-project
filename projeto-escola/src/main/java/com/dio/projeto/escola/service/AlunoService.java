@@ -39,4 +39,8 @@ public class AlunoService {
         Aluno aluno = buscarAlunoPorId(id);
         alunoRepository.delete(aluno);
     }
+
+    public void editarAluno(Aluno aluno){
+        alunoRepository.save(aluno);
+    }
 }

@@ -1,0 +1,100 @@
+<!DOCTYPE>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <title>Sistema de Administração Escolar</title>
+    <link th:href="@{/css/aluno-atualizar.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header class="header">
+    <div>
+        <br><p><h2 class="atualizarAluno">Atualizar Aluno</h2></p>
+    </div>
+</header>
+<main>
+    <div class="principal">
+        <aside class="aside">
+            <div class="button">
+                <a th:href="@{/cadastro-aluno}"><button type="submit" title="Cadastrar Aluno">Cadastrar</button></a><br><br>
+                <a th:href="@{/consultar-aluno}"><button type="submit" title="Consultar Aluno">Consultar</button></a><br><br>
+                <a th:href="@{/atualizar-aluno}"><button type="submit" title="Atualizar Aluno">Atualizar</button></a><br><br>
+                <a th:href="@{/deletar-aluno}"><button type="submit" title="Deletar Aluno">Deletar</button></a><br><br>
+            </div>
+        </aside>
+        <section class="section">
+            <div th:if="${mensagem}">
+                <p><span th:text="${mensagem}"></span></p>
+            </div>
+            <div class="divformulario">
+                <div>
+                    <form th:object="${objetoAluno}" th:action="@{/editar-aluno/{id}(id=${objetoAluno.IdAluno})}" method="post">
+                    <div class="nome">
+                        <label>Nome:</label><br>
+                        <input type="text" class="inputnome" name="nome" th:field="${objetoAluno.nome}"/>
+                    </div>
+                    <div class="telefone">
+                        <label class="labeltelefone">Telefone:</label><br>
+                        <input type="text" class="inputtelefone" name="telefone" th:field="${objetoAluno.telefone}"/><br>
+                    </div>
+                    <div class="email">
+                        <label>Email:</label><br>
+                        <input type="email" class="inputemail" name="email" th:field="${objetoAluno.email}"/><br>
+                    </div>
+                    <div class="cpf">
+                        <label>CPF:</label><br>
+                        <input type="text" name="cpf" th:field="${objetoAluno.cpf}"/><br>
+                    </div>
+                    <div class="rg">
+                        <label>RG:</label><br>
+                        <input type="text" name="rg" th:field="${objetoAluno.rg}"/>
+                    </div>
+                    <div class="nascimento">
+                        <label>Data de Nascimento:</label><br>
+                        <input type="text" name="dataNascimento" th:field="${objetoAluno.dataNascimento}"/>
+                    </div>
+                    <div class="cep">
+                        <label>Cep:</label><br>
+                        <input type="text" name="cep" th:field="${objetoAluno.cep}"/>
+                    </div>
+                    <div class="endereco">
+                        <label>Endereço:</label><br>
+                        <input type="text" class="inputendereco" name="endereco" th:field="${objetoAluno.endereco}"/><br>
+                    </div>
+                    <div class="numero">
+                        <label>Numero:</label><br>
+                        <input type="text" name="numero" th:field="${objetoAluno.numero}"/>
+                    </div>
+                    <div class="bairro">
+                        <label>Bairro:</label><br>
+                        <input type="text" class="inputbairro" name="bairro" th:field="${objetoAluno.bairro}"/>
+                    </div>
+                    <div class="cidade">
+                        <label>Cidade:</label><br>
+                        <input type="text" class="inputcidade" name="cidade" th:field="${objetoAluno.cidade}"/>
+                    </div>
+                    <div class="estado">
+                        <label>Estado:</label><br>
+                        <input type="text" class="inputestado" name="estado" th:field="${objetoAluno.estado}"/>
+                    </div>
+                    <div class="buttonatualizar">
+                        <button type="submit" title="Atualizar Aluno">Atualizar Aluno</button>
+                    </div>
+                </form>
+                    <div class="buttonvoltarlista">
+                        <a th:href="@{/atualizar-aluno}"><button type="submit" title="Voltar Lista de Alunos">Voltar Lista de Alunos</button></a>
+                    </div>
+                </div>
+            <div class="buttonvoltar">
+                <a th:href="@{/cadastro-aluno}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
+            </div>
+            </div>
+        </section>
+    </div>
+</main>
+<footer class="footer">
+    <div>
+    </div>
+</footer>
+</body>
+</html>

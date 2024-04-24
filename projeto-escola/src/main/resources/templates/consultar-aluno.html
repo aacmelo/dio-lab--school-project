@@ -18,7 +18,7 @@
             <div class="button">
                 <a th:href="@{cadastro-aluno}"><button type="submit" title="Cadastrar Aluno">Cadastrar</button></a></a><br><br>
                 <a th:href="@{consultar-aluno}"><button type="submit" title="Consultar Aluno">Consultar</button></a><br><br>
-                <button type="submit" title="Atualizar Aluno">Atualizar</button><br><br>
+                <a th:href="@{atualizar-aluno}"><button type="submit" title="Atualizar Aluno">Atualizar</button></a><br><br>
                 <a th:href="@{deletar-aluno}"><button type="submit" title="Deletar Aluno">Deletar</button></a><br><br>
             </div>
         </aside>
@@ -27,7 +27,7 @@
         <form th:action="@{/consultar}" method="post">
            <div class="nome">
                <label class="labelnome">Digite o Nome do Aluno:</label><br>
-               <input type="text" class="inputnome" placeholder="Nome" required name="nome"/>
+               <input type="text" class="inputnome" placeholder="Nome do Aluno" required name="nome"/>
            </div>
             <div class="tabela">
                 <table>

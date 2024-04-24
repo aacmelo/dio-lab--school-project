@@ -79,9 +79,36 @@ public class AlunoController {
     public String apagarAluno(Long id, RedirectAttributes attributes){
         try {
             alunoService.apagarAluno(id);
+            attributes.addFlashAttribute("mensagemDeletar","Aluno Apagado com Sucesso");
         } catch (AlunoNotFoundException e) {
-           attributes.addFlashAttribute("mensagemErro",e.getMessage());
+           attributes.addFlashAttribute("mensagemErro", e.getMessage());
         }
         return"redirect:/deletar-aluno";
+    }
+
+    @GetMapping("/atualizar-aluno")
+    public String atualizarAluno(Model model){
+        List<Aluno> alunos = alunoService.consultarTodosAlunos();
+        model.addAttribute("listaAlunos", alunos);
+        return "/atualizar-aluno";
+    }
+
+    @GetMapping("/editar-aluno/{id}")
+    public String editarFormAluno(@PathVariable("id") long id, RedirectAttributes attributes, Model model){
+        try{
+           Aluno aluno = alunoService.buscarAlunoPorId(id);
+           model.addAttribute("objetoAluno", aluno);
+           return "/aluno-atualizar";
+        }catch (AlunoNotFoundException e){
+            attributes.addFlashAttribute("mensagemErro", e.getMessage());
+        }
+        return "/aluno-atualizar";
+    }
+
+    @PostMapping("/editar-aluno/{id}")
+    public String editarAluno(@PathVariable("id") long id, @ModelAttribute("objetoAluno") Aluno aluno, RedirectAttributes attributes){
+        alunoService.editarAluno(aluno);
+        attributes.addFlashAttribute("mensagem","Atualização do Aluno Realizada");
+        return "/aluno-atualizar";
     }
 }

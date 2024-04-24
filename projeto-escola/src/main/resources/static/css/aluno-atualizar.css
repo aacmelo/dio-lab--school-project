@@ -26,13 +26,14 @@ body{
    border: 2px solid white;
    background-color: #151515;
 }
-.consultarAluno{
+.atualizarAluno{
    margin: -20px 500px;
    color: #00FFFF;
 }
 .aside{
    grid-area: aside;
    margin: -260px -1245px;
+   text-align: center;
    width: 85px;
    height: 455px;
    background-color: #0B0B3B;
@@ -40,7 +41,6 @@ body{
 }
 .button{
   margin: 30px 5px;
-  text-align: center;
 }
 .section{
    grid-area: section;
@@ -62,44 +62,71 @@ body{
    border: 2px solid white;
 }
 .divformulario{
- margin: 10px -5px;
+ margin: 10px 35px;
 }
 .nome{
-   margin: 0px 10px;
-   .inputnome{
-   width: 355px;
-   }
+  margin: 0px -30px;
+  .inputnome{
+  width: 355px;
+  }
 }
-.tabela{
- margin: 10px 10px;
- text-align: center;
- background-color: black;
- color: white;
+.telefone{
+ margin: -40px 340px;
+ .inputtelefone{
+ width: 115px;
+ }
 }
-.tabela, th, tr{
- border: 2px solid white;
- border-collapse: collapse;
- padding: 5px 10px;
- font-size: 12px;
- text-align: center;
- color:white;
+.email{
+ margin: -40px 470px;
+ .inputemail{
+ width: 350px;
+ }
 }
-.buttonconsultar{
- margin: 10px 10px;
+.cpf{
+ margin: -40px 840px;
 }
-.buttonreset{
- margin: -30px 150px;
+.rg{
+ margin: 60px -30px;
 }
-.buttonlistaralunos{
- margin: -37px 280px;
+.nascimento{
+ margin: -100px 150px;
+}
+.cep{
+ margin: 60px 330px;
+}
+.endereco{
+ margin: -100px 510px;
+ .inputendereco{
+ width: 300px;
+ }
+}
+.numero{
+ margin: 60px 840px;
+}
+.bairro{
+ margin: -40px -30px;
+ .inputbairro{
+ width: 200px;
+ }
+}
+.cidade{
+ margin: -40px 200px;
+ .inputcidade{
+ width: 250px;
+ }
+}
+.estado{
+ margin: -40px 480px;
+ .inputestado{
+ width: 250px;
+ }
+}
+.buttonAtualizar{
+ margin: 60px -30px;
+}
+.buttonvoltarlista{
+ margin: -81px 100px;
 }
 .buttonvoltar{
- margin: 15px 440px;
-}
-.formid{
- margin: 7px 490px;
- color: white;
- .buttondeletar{
- margin: -22px 190px;
- }
+ margin: 60px 270px;
 }

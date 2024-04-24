@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Administração Escolar</title>
-    <link th:href="@{/css/deletar-aluno.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/css/atualizar-aluno.css}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <header class="header">
     <div>
-        <br><p><h2 class="consultarAluno">Deletar Aluno</h2></p>
+        <br><p><h2 class="consultarAluno">Atualizar Aluno</h2></p>
     </div>
 </header>
 <main>
@@ -23,15 +23,7 @@
             </div>
         </aside>
         <section class="section">
-            <div th:if="${mensagemDeletar}">
-                <br><span th:text="${mensagemDeletar}"></span><br>
-            </div>
-            <div class="divformulario">
-                <form th:action="@{/deletar}" method="post">
-                    <div class="nome">
-                        <label class="labelnome">Digite o Nome do Aluno:</label><br>
-                        <input type="text" class="inputnome" placeholder="Nome do Aluno" required name="nome"/>
-                    </div>
+            <div class="divtabela">
                     <div class="tabela">
                         <table>
                             <thead class="cabecalhotabela">
@@ -49,10 +41,11 @@
                                 <th>Bairro</th>
                                 <th>Cidade</th>
                                 <th>Estado</th>
+                                <th>Atualizar Aluno</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr th:each="alunos : ${listaAlunos}">
+                            <tr th:each=" alunos : ${listaAlunos}">
                                 <td><span th:text="${alunos.IdAluno}"></span></td>
                                 <td><span th:text="${alunos.nome}"></span></td>
                                 <td><span th:text="${alunos.telefone}"></span></td>
@@ -66,36 +59,16 @@
                                 <td><span th:text="${alunos.bairro}"></span></td>
                                 <td><span th:text="${alunos.cidade}"></span></td>
                                 <td><span th:text="${alunos.estado}"></span></td>
+                                <td><a th:href="@{/editar-aluno/{id}(id=${alunos.IdAluno})}"><button type="submit" title="Atualizar Aluno">Atualizar</button></a></td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="buttonconsultar">
-                        <button type="submit" title="Realiza a Consulta do Aluno">Consultar Aluno</button>
-                    </div>
-                    <div class="buttonreset">
-                        <button type="reset" title="Limpar Campo da Consulta">Limpar Campo</button>
-                    </div>
-                </form>
-              </div>
-            <div class="buttonlistaralunos">
-                <a th:href="@{/deletar-aluno}"><button type="submit" title="Listar Todos Alunos">Listar Todos Alunos</button></a>
             </div>
             <div class="buttonvoltar">
                 <a th:href="@{/cadastro-aluno}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
             </div>
         </section>
-        <div class="formid">
-            <form th:action="@{/apagar/{id}}" method="post">
-                <div>
-                    <label>Id:</label><br>
-                    <input type="text" placeholder="Id do Aluno" required name="id" field="*{id}"/>
-                </div>
-                <div class="buttondeletar">
-                    <button type="submit" title="Deletar Aluno">Deletar</button>
-                </div>
-            </form>
-        </div>
     </div>
 </main>
 <footer class="footer">

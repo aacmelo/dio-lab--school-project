@@ -61,14 +61,9 @@ body{
    background-color: #240B3B;
    border: 2px solid white;
 }
-.divformulario{
+.divfortabela{
  margin: 10px -5px;
 }
-.nome{
-   margin: 0px 10px;
-   .inputnome{
-   width: 355px;
-   }
 }
 .tabela{
  margin: 10px 10px;
@@ -84,22 +79,6 @@ body{
  text-align: center;
  color:white;
 }
-.buttonconsultar{
- margin: 10px 10px;
-}
-.buttonreset{
- margin: -30px 150px;
-}
-.buttonlistaralunos{
- margin: -37px 280px;
-}
 .buttonvoltar{
- margin: 15px 440px;
-}
-.formid{
- margin: 7px 490px;
- color: white;
- .buttondeletar{
- margin: -22px 190px;
- }
+ margin: 15px 470px;
 }
