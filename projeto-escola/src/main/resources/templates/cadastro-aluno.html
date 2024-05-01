@@ -1,5 +1,5 @@
 <!DOCTYPE>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=divice-width, initial-scale=1.0">
@@ -23,58 +23,118 @@
             </div>
         </aside>
         <section class="section">
-            <div th:if="${mensagem}">
-                <p><span th:text="${mensagem}"></span></p>
+            <div>
+                <a th:href="@{cadastro-aluno}"><span th:if="${mensagem}" class="alert" th:text="${mensagem}"></span></a>
             </div>
             <div class="divformulario">
                 <form th:object="${novoAluno}" th:action="@{/novoaluno}" method="post">
+                    <div>
+                        <a th:href="@{cadastro-aluno}">
+                            <span class="alert" th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+                        </a>
+                    </div>
                     <div class="nome">
                         <label>Nome:</label><br>
-                        <input type="text" class="inputnome" placeholder="Nome do Aluno" required name="nome" field="*{nome}"/>
+                        <input type="text" class="inputnome" placeholder="Nome do Aluno" name="nome" field="*{nome}"/>
+                    </div>
+                    <div>
+                        <a th:href="@{cadastro-aluno}">
+                            <span class="alert" th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}"></span>
+                        </a>
                     </div>
                     <div class="telefone">
                         <label class="labeltelefone">Telefone:</label><br>
-                        <input type="text" class="inputtelefone" placeholder="Telefone" required name="telefone" field="*{telefone}"/><br>
+                        <input type="text" class="inputtelefone" placeholder="Telefone" name="telefone" field="*{telefone}"/><br>
+                    </div>
+                    <div>
+                        <a th:href="@{cadastro-aluno}">
+                        <span class="alert" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                        </a>
                     </div>
                     <div class="email">
                         <label>E-mail:</label><br>
-                        <input type="email" class="inputemail" placeholder="E-mail" required name="email" field="*{email}"/><br>
+                        <input type="email" class="inputemail" placeholder="E-mail" name="email" field="*{email}"/><br>
+                    </div>
+                    <div>
+                        <a th:href="@{cadastro-aluno}">
+                            <span class="alert" th:if="${#fields.hasErrors('cpf')}" th:errors="*{cpf}"></span>
+                        </a>
                     </div>
                     <div class="cpf">
                         <label>CPF:</label><br>
-                        <input type="text" placeholder="CPF" required name="cpf" field="*{cpf}"/><br>
+                        <input type="text" placeholder="CPF" name="cpf" field="*{cpf}"/><br>
+                    </div>
+                    <div>
+                        <a th:href="@{cadastro-aluno}">
+                            <span class="alert" th:if="${#fields.hasErrors('rg')}" th:errors="*{rg}"></span>
+                        </a>
                     </div>
                     <div class="rg">
                         <label>RG:</label><br>
-                        <input type="text" placeholder="RG" required name="rg" field="*{rg}"/>
+                        <input type="text" placeholder="RG" name="rg" field="*{rg}"/>
+                    </div>
+                    <div>
+                        <a th:href="@{cadastro-aluno}">
+                            <span class="alert" th:if="${#fields.hasErrors('dataNascimento')}" th:errors="*{dataNascimento}"></span>
+                        </a>
                     </div>
                     <div class="nascimento">
                         <label>Data de Nascimento:</label><br>
-                        <input type="text" placeholder="Dade de Nascimento" required name="dataNascimento" field="*{dataNascimento}"/>
+                        <input type="text" placeholder="Dade de Nascimento" name="dataNascimento" field="*{dataNascimento}"/>
+                    </div>
+                    <div>
+                        <a th:href="@{cadastro-aluno}">
+                            <span class="alert" th:if="${#fields.hasErrors('cep')}" th:errors="*{cep}"></span>
+                        </a>
                     </div>
                     <div class="cep">
                         <label>Cep:</label><br>
-                        <input type="text" placeholder="Cep" required name="cep" field="*{cep}"/>
+                        <input type="text" placeholder="Cep" name="cep" field="*{cep}"/>
+                    </div>
+                    <div>
+                        <a th:href="@{cadastro-aluno}">
+                            <span class="alert" th:if="${#fields.hasErrors('endereco')}" th:errors="*{endereco}"></span>
+                        </a>
                     </div>
                     <div class="endereco">
                         <label>Endereço:</label><br>
-                        <input type="text" class="inputendereco" placeholder="Endereço" required name="endereco" field="*{endereco}"/><br>
+                        <input type="text" class="inputendereco" placeholder="Endereço" name="endereco" field="*{endereco}"/><br>
+                    </div>
+                    <div>
+                        <a th:href="@{cadastro-aluno}">
+                            <span class="alert" th:if="${#fields.hasErrors('numero')}" th:errors="*{numero}"></span>
+                        </a>
                     </div>
                     <div class="numero">
                         <label>Numero:</label><br>
-                        <input type="text" placeholder="Numero" required name="numero" field="*{numero}"/>
+                        <input type="text" placeholder="Numero" name="numero" field="*{numero}"/>
+                    </div>
+                    <div>
+                        <a th:href="@{cadastro-aluno}">
+                            <span class="alert" th:if="${#fields.hasErrors('bairro')}" th:errors="*{bairro}"></span>
+                        </a>
                     </div>
                     <div class="bairro">
                         <label>Bairro:</label><br>
-                        <input type="text" class="inputbairro" placeholder="Bairro" required name="bairro" field="*{bairro}"/>
+                        <input type="text" class="inputbairro" placeholder="Bairro" name="bairro" field="*{bairro}"/>
+                    </div>
+                    <div>
+                        <a th:href="@{cadastro-aluno}">
+                            <span class="alert" th:if="${#fields.hasErrors('cidade')}" th:errors="*{cidade}"></span>
+                        </a>
                     </div>
                     <div class="cidade">
                         <label>Cidade:</label><br>
-                        <input type="text" class="inputcidade" placeholder="Cidade" required name="cidade" field="*{cidade}"/>
+                        <input type="text" class="inputcidade" placeholder="Cidade" name="cidade" field="*{cidade}"/>
+                    </div>
+                    <div>
+                        <a th:href="@{cadastro-aluno}">
+                            <span class="alert" th:if="${#fields.hasErrors('estado')}" th:errors="*{estado}"></span>
+                        </a>
                     </div>
                     <div class="estado">
                         <label>Estado:</label><br>
-                        <input type="text" class="inputestado" placeholder="Estado" required name="estado" field="*{estado}"/>
+                        <input type="text" class="inputestado" placeholder="Estado" name="estado" field="*{estado}"/>
                     </div>
                     <div class="buttonsalvar">
                         <button type="submit" title="Cadastrar Aluno">Cadastrar Aluno</button>
@@ -85,7 +145,7 @@
                 </form>
             </div>
             <div class="buttonvoltar">
-                <a th:href="@{/cadastro-aluno}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
+                <a th:href="@{cadastro-aluno}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
             </div>
         </section>
     </div>

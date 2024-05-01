@@ -23,8 +23,10 @@
             </div>
         </aside>
         <section class="section">
-            <div th:if="${mensagemDeletar}">
-                <br><span th:text="${mensagemDeletar}"></span><br>
+            <div>
+                <a th:href="@{deletar-aluno}">
+                    <span class="alert" th:if="${mensagemDeletar}" th:text="${mensagemDeletar}"></span>
+                </a>
             </div>
             <div class="divformulario">
                 <form th:action="@{/deletar}" method="post">
