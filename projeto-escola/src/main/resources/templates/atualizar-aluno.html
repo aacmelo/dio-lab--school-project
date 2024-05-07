@@ -24,46 +24,46 @@
         </aside>
         <section class="section">
             <div class="divtabela">
-                    <div class="tabela">
-                        <table>
-                            <thead class="cabecalhotabela">
-                            <tr>
-                                <th>Id do Estudante</th>
-                                <th>Nome</th>
-                                <th>Telefone</th>
-                                <th>E-mail</th>
-                                <th>CPF</th>
-                                <th>RG</th>
-                                <th>Data de Nascimento</th>
-                                <th>CEP</th>
-                                <th>Endereço</th>
-                                <th>Numero</th>
-                                <th>Bairro</th>
-                                <th>Cidade</th>
-                                <th>Estado</th>
-                                <th>Atualizar Aluno</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr th:each=" alunos : ${listaAlunos}">
-                                <td><span th:text="${alunos.IdAluno}"></span></td>
-                                <td><span th:text="${alunos.nome}"></span></td>
-                                <td><span th:text="${alunos.telefone}"></span></td>
-                                <td><span th:text="${alunos.email}"></span></td>
-                                <td><span th:text="${alunos.cpf}"></span></td>
-                                <td><span th:text="${alunos.rg}"></span></td>
-                                <td><span th:text="${alunos.dataNascimento}"></span></td>
-                                <td><span th:text="${alunos.cep}"></span></td>
-                                <td><span th:text="${alunos.endereco}"></span></td>
-                                <td><span th:text="${alunos.numero}"></span></td>
-                                <td><span th:text="${alunos.bairro}"></span></td>
-                                <td><span th:text="${alunos.cidade}"></span></td>
-                                <td><span th:text="${alunos.estado}"></span></td>
-                                <td><a th:href="@{/editar-aluno/{id}(id=${alunos.IdAluno})}"><button type="submit" title="Atualizar Aluno">Atualizar</button></a></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="tabela">
+                    <table>
+                        <thead class="cabecalhotabela">
+                        <tr>
+                            <th>Id do Estudante</th>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>E-mail</th>
+                            <th>CPF</th>
+                            <th>RG</th>
+                            <th>Data de Nascimento</th>
+                            <th>CEP</th>
+                            <th>Endereço</th>
+                            <th>Numero</th>
+                            <th>Bairro</th>
+                            <th>Cidade</th>
+                            <th>Estado</th>
+                            <th>Atualizar Aluno</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each = " alunos : ${listaAlunos}">
+                            <td><span th:text="${alunos.IdAluno}"></span></td>
+                            <td><span th:text="${alunos.nome}"></span></td>
+                            <td><span th:text="${alunos.telefone}"></span></td>
+                            <td><span th:text="${alunos.email}"></span></td>
+                            <td><span th:text="${alunos.cpf}"></span></td>
+                            <td><span th:text="${alunos.rg}"></span></td>
+                            <td><span th:text="${alunos.dataNascimento}"></span></td>
+                            <td><span th:text="${alunos.cep}"></span></td>
+                            <td><span th:text="${alunos.endereco}"></span></td>
+                            <td><span th:text="${alunos.numero}"></span></td>
+                            <td><span th:text="${alunos.bairro}"></span></td>
+                            <td><span th:text="${alunos.cidade}"></span></td>
+                            <td><span th:text="${alunos.estado}"></span></td>
+                            <td><a th:href="@{/consultar-aluno/{id}(id=${alunos.IdAluno})}"><button type="submit" title="Atualizar Aluno">Atualizar</button></a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="buttonvoltar">
                 <a th:href="@{/cadastro-aluno}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>

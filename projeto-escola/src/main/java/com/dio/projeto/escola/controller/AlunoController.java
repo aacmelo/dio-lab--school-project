@@ -86,7 +86,7 @@ public class AlunoController {
             alunoService.apagarAluno(id);
             attributes.addFlashAttribute("mensagemDeletar","Aluno Apagado com Sucesso");
         } catch (AlunoNotFoundException e) {
-           attributes.addFlashAttribute("mensagemErro", e.getMessage());
+            attributes.addFlashAttribute("mensagemErro", e.getMessage());
         }
         return"redirect:/deletar-aluno";
     }
@@ -98,12 +98,12 @@ public class AlunoController {
         return "/atualizar-aluno";
     }
 
-    @GetMapping("/editar-aluno/{id}")
-    public String editarFormAluno(@PathVariable("id") long id, RedirectAttributes attributes, Model model){
+    @GetMapping("/consultar-aluno/{id}")
+    public String editarFormAluno(@PathVariable("id") long id, Model model, RedirectAttributes attributes){
         try{
-           Aluno aluno = alunoService.buscarAlunoPorId(id);
-           model.addAttribute("objetoAluno", aluno);
-           return "/aluno-atualizar";
+            Aluno aluno = alunoService.buscarAlunoPorId(id);
+            model.addAttribute("objetoAluno", aluno);
+            return "/aluno-atualizar";
         }catch (AlunoNotFoundException e){
             attributes.addFlashAttribute("mensagemErro", e.getMessage());
         }
@@ -111,9 +111,16 @@ public class AlunoController {
     }
 
     @PostMapping("/editar-aluno/{id}")
-    public String editarAluno(@PathVariable("id") long id, @ModelAttribute("objetoAluno") Aluno aluno, RedirectAttributes attributes){
-        alunoService.editarAluno(aluno);
-        attributes.addFlashAttribute("mensagem","Atualização do Aluno Realizada");
+    public String editarAluno(@PathVariable("id") long id,
+                              @ModelAttribute("objetoAluno") @Valid Aluno aluno, BindingResult erros, RedirectAttributes attributes) {
+        if (erros.hasErrors()) {
+            aluno.setIdAluno(id);
+            return "/aluno-atualizar";
+        } else {
+            aluno.setIdAluno(id);
+            alunoService.editarAluno(aluno);
+            attributes.addFlashAttribute("mensagem", "Atualização do Aluno Realizada com Sucesso");
+        }
         return "/aluno-atualizar";
     }
 }

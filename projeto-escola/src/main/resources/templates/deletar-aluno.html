@@ -79,7 +79,7 @@
                         <button type="reset" title="Limpar Campo da Consulta">Limpar Campo</button>
                     </div>
                 </form>
-              </div>
+            </div>
             <div class="buttonlistaralunos">
                 <a th:href="@{/deletar-aluno}"><button type="submit" title="Listar Todos Alunos">Listar Todos Alunos</button></a>
             </div>
@@ -88,6 +88,11 @@
             </div>
         </section>
         <div class="formid">
+            <div>
+                <a th:href="@{deletar-aluno}">
+                    <span class="alert" th:if="${mensagemErro}" th:text="${mensagemErro}"></span>
+                </a>
+            </div>
             <form th:action="@{/apagar/{id}}" method="post">
                 <div>
                     <label>Id:</label><br>

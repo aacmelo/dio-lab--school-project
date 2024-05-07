@@ -23,71 +23,116 @@
             </div>
         </aside>
         <section class="section">
-            <div th:if="${mensagem}">
-                <p><span th:text="${mensagem}"></span></p>
+            <div>
+                <span th:if="${mensagem}" class="alert" th:text="${mensagem}"></span>
             </div>
             <div class="divformulario">
                 <div>
-                    <form th:object="${objetoAluno}" th:action="@{/editar-aluno/{id}(id=${objetoAluno.IdAluno})}" method="post">
-                    <div class="nome">
-                        <label>Nome:</label><br>
-                        <input type="text" class="inputnome" name="nome" th:field="${objetoAluno.nome}"/>
-                    </div>
-                    <div class="telefone">
-                        <label class="labeltelefone">Telefone:</label><br>
-                        <input type="text" class="inputtelefone" name="telefone" th:field="${objetoAluno.telefone}"/><br>
-                    </div>
-                    <div class="email">
-                        <label>Email:</label><br>
-                        <input type="email" class="inputemail" name="email" th:field="${objetoAluno.email}"/><br>
-                    </div>
-                    <div class="cpf">
-                        <label>CPF:</label><br>
-                        <input type="text" name="cpf" th:field="${objetoAluno.cpf}"/><br>
-                    </div>
-                    <div class="rg">
-                        <label>RG:</label><br>
-                        <input type="text" name="rg" th:field="${objetoAluno.rg}"/>
-                    </div>
-                    <div class="nascimento">
-                        <label>Data de Nascimento:</label><br>
-                        <input type="text" name="dataNascimento" th:field="${objetoAluno.dataNascimento}"/>
-                    </div>
-                    <div class="cep">
-                        <label>Cep:</label><br>
-                        <input type="text" name="cep" th:field="${objetoAluno.cep}"/>
-                    </div>
-                    <div class="endereco">
-                        <label>Endereço:</label><br>
-                        <input type="text" class="inputendereco" name="endereco" th:field="${objetoAluno.endereco}"/><br>
-                    </div>
-                    <div class="numero">
-                        <label>Numero:</label><br>
-                        <input type="text" name="numero" th:field="${objetoAluno.numero}"/>
-                    </div>
-                    <div class="bairro">
-                        <label>Bairro:</label><br>
-                        <input type="text" class="inputbairro" name="bairro" th:field="${objetoAluno.bairro}"/>
-                    </div>
-                    <div class="cidade">
-                        <label>Cidade:</label><br>
-                        <input type="text" class="inputcidade" name="cidade" th:field="${objetoAluno.cidade}"/>
-                    </div>
-                    <div class="estado">
-                        <label>Estado:</label><br>
-                        <input type="text" class="inputestado" name="estado" th:field="${objetoAluno.estado}"/>
-                    </div>
-                    <div class="buttonatualizar">
-                        <button type="submit" title="Atualizar Aluno">Atualizar Aluno</button>
-                    </div>
-                </form>
+                    <form th:object="${objetoAluno}" th:action="@{/editar-aluno/{id}(id=${objetoAluno.idAluno})}" method="post">
+                        <div>
+                            <a th:href="@{/consultar-aluno/{id}(id=${objetoAluno.idAluno})}">
+                                <span th:if="${#fields.hasErrors('nome')}" class="alert" th:errors="*{nome}"></span>
+                            </a>
+                        </div>
+                        <div class="nome">
+                            <label>Nome:</label><br>
+                            <input type="text" class="inputnome" name="nome" th:value="${objetoAluno.nome}"/>
+                        </div>
+                        <div>
+                            <a th:href="@{/consultar-aluno/{id}(id=${objetoAluno.idAluno})}">
+                                <span th:if="${#fields.hasErrors('telefone')}" class="alert" th:errors="*{telefone}"></span>
+                            </a>
+                        </div>
+                        <div class="telefone">
+                            <label class="labeltelefone">Telefone:</label><br>
+                            <input type="text" class="inputtelefone" name="telefone" th:value="${objetoAluno.telefone}"/><br>
+                        </div>
+                        <div>
+                            <a th:href="@{/consultar-aluno/{id}(id=${objetoAluno.idAluno})}">
+                                <span th:if="${#fields.hasErrors('email')}" class="alert" th:errors="*{email}"></span>
+                            </a>
+                        </div>
+                        <div class="email">
+                            <label>Email:</label><br>
+                            <input type="email" class="inputemail" name="email" th:value="${objetoAluno.email}"/><br>
+                        </div>
+                        <div class="cpf">
+                            <label>CPF:</label><br>
+                            <input type="text" name="cpf" readonly="readonly" th:value="${objetoAluno.cpf}"/><br>
+                        </div>
+                        <div class="rg">
+                            <label>RG:</label><br>
+                            <input type="text" name="rg" readonly="readonly" th:value="${objetoAluno.rg}"/>
+                        </div>
+                        <div class="nascimento">
+                            <label>Data de Nascimento:</label><br>
+                            <input type="text" name="dataNascimento" readonly="readonly" th:value="${objetoAluno.dataNascimento}"/>
+                        </div>
+                        <div>
+                            <a th:href="@{/consultar-aluno/{id}(id=${objetoAluno.idAluno})}">
+                                <span th:if="${#fields.hasErrors('cep')}" class="alert" th:errors="*{cep}"></span>
+                            </a>
+                        </div>
+                        <div class="cep">
+                            <label>Cep:</label><br>
+                            <input type="text" name="cep" th:field="${objetoAluno.cep}"/>
+                        </div>
+                        <div>
+                            <a th:href="@{/consultar-aluno/{id}(id=${objetoAluno.idAluno})}">
+                                <span th:if="${#fields.hasErrors('endereco')}" class="alert" th:errors="*{endereco}"></span>
+                            </a>
+                        </div>
+                        <div class="endereco">
+                            <label>Endereço:</label><br>
+                            <input type="text" class="inputendereco" name="endereco" th:value="${objetoAluno.endereco}"/><br>
+                        </div>
+                        <div>
+                            <a th:href="@{/consultar-aluno/{id}(id=${objetoAluno.idAluno})}">
+                                <span th:if="${#fields.hasErrors('numero')}" class="alert" th:errors="*{numero}"></span>
+                            </a>
+                        </div>
+                        <div class="numero">
+                            <label>Numero:</label><br>
+                            <input type="text" name="numero" th:value="${objetoAluno.numero}"/>
+                        </div>
+                        <div>
+                            <a th:href="@{/consultar-aluno/{id}(id=${objetoAluno.idAluno})}">
+                                <span th:if="${#fields.hasErrors('bairro')}" class="alert" th:errors="*{bairro}"></span>
+                            </a>
+                        </div>
+                        <div class="bairro">
+                            <label>Bairro:</label><br>
+                            <input type="text" class="inputbairro" name="bairro" th:value="${objetoAluno.bairro}"/>
+                        </div>
+                        <div>
+                            <a th:href="@{/consultar-aluno/{id}(id=${objetoAluno.idAluno})}">
+                                <span th:if="${#fields.hasErrors('cidade')}" class="alert" th:errors="*{cidade}"></span>
+                            </a>
+                        </div>
+                        <div class="cidade">
+                            <label>Cidade:</label><br>
+                            <input type="text" class="inputcidade" name="cidade" th:value="${objetoAluno.cidade}"/>
+                        </div>
+                        <div>
+                            <a th:href="@{/consultar-aluno/{id}(id=${objetoAluno.idAluno})}">
+                                <span th:if="${#fields.hasErrors('estado')}" class="alert" th:errors="*{estado}"></span>
+                            </a>
+                        </div>
+                        <div class="estado">
+                            <label>Estado:</label><br>
+                            <input type="text" class="inputestado" name="estado" th:value="${objetoAluno.estado}"/>
+                        </div>
+                        <div class="buttonatualizar">
+                            <button type="submit" title="Atualizar Aluno">Atualizar Aluno</button>
+                        </div>
+                    </form>
                     <div class="buttonvoltarlista">
                         <a th:href="@{/atualizar-aluno}"><button type="submit" title="Voltar Lista de Alunos">Voltar Lista de Alunos</button></a>
                     </div>
                 </div>
-            <div class="buttonvoltar">
-                <a th:href="@{/cadastro-aluno}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
-            </div>
+                <div class="buttonvoltar">
+                    <a th:href="@{/cadastro-aluno}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
+                </div>
             </div>
         </section>
     </div>

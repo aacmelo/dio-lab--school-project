@@ -23,7 +23,7 @@ public class AlunoService {
     }
 
     public List<Aluno> consultarAlunoPorNome(String nome){
-       return alunoRepository.findByNomeContainingIgnoreCase(nome);
+        return alunoRepository.findByNomeContainingIgnoreCase(nome);
     }
 
     public Aluno buscarAlunoPorId(Long id) throws AlunoNotFoundException{
@@ -31,7 +31,7 @@ public class AlunoService {
         if(opt.isPresent()){
             return opt.get();
         }else{
-          throw new AlunoNotFoundException("Aluno Não Cadastrado");
+            throw new AlunoNotFoundException("Aluno Não Cadastrado");
         }
     }
 

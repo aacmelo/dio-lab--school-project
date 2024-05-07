@@ -7,7 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class MatricularProfessor {
+public class Professor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

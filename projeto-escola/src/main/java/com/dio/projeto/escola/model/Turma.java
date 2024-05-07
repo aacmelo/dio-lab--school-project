@@ -20,5 +20,5 @@ public class Turma {
     private Cursos nomeCurso;
 
     @OneToMany
-    private List<MatricularAluno> alunos = new ArrayList<>();
+    private List<Matricula> alunos = new ArrayList<>();
 }

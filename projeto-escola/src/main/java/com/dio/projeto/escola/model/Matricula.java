@@ -9,7 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @Data
 
-public class MatricularAluno {
+public class Matricula {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idMatriculaAluno;

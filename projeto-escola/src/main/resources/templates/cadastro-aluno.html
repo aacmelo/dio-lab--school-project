@@ -9,7 +9,7 @@
 <body>
 <header class="header">
     <div>
-    <br><p><h2 class="cadastroAluno">Cadastro de Aluno</h2></p>
+        <br><p><h2 class="cadastroAluno">Cadastro Aluno</h2></p>
     </div>
 </header>
 <main>
@@ -24,7 +24,9 @@
         </aside>
         <section class="section">
             <div>
-                <a th:href="@{cadastro-aluno}"><span th:if="${mensagem}" class="alert" th:text="${mensagem}"></span></a>
+                <a th:href="@{cadastro-aluno}">
+                    <span th:if="${mensagem}" class="alert" th:text="${mensagem}"></span>
+                </a>
             </div>
             <div class="divformulario">
                 <form th:object="${novoAluno}" th:action="@{/novoaluno}" method="post">
@@ -48,7 +50,7 @@
                     </div>
                     <div>
                         <a th:href="@{cadastro-aluno}">
-                        <span class="alert" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                            <span class="alert" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
                         </a>
                     </div>
                     <div class="email">
