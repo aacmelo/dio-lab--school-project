@@ -393,10 +393,11 @@ section{
   }
   .buttonvoltar{
   margin: 40px 205px;
-  width: 300px;
+  width: 100px;
   .voltar-responsivo{
   font-size: 11px;
-  }
+  width: 120px;
+   }
   }
   .footer{
   position: relative;
