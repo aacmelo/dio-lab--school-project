@@ -394,6 +394,7 @@ section{
   .buttonvoltar{
   margin: 40px 205px;
   width: 100px;
+
   .voltar-responsivo{
   font-size: 11px;
   width: 120px;
@@ -406,10 +407,10 @@ section{
   height: 90px;
   }
 }
-@media(max-width:915px) and (max-height: 412px){
+@media(min-width:412px) and (max-width: 915px){
   body{
   background-color: black;
-  width: 480px;
+  width: 595px;
   height: 1065px;
   display: grid;
   grid-template-columns: repeat(4,120px);
@@ -421,19 +422,15 @@ section{
   column-gap: 1px;
   row-gap: 1px;
   }
-  main{
-    width: 480px;
-    height: 1065px;
-  }
   header{
   grid-area: header;
   position: relative;
   margin: 5px 1px;
-  width: 475px;
+  width: 590px;
   height: 70px;
   }
   .cadastro-aluno{
-  margin: -15px -10px;
+  margin: -15px 50px;
   padding-top: 2px;
   width: 500px;
   height: 95px;
@@ -446,7 +443,7 @@ section{
   grid-area: aside;
   position: relative;
   margin: 15px 1px;
-  width: 475px;
+  width: 590px;
   height: 70px;
   }
   .div-button{
@@ -476,11 +473,11 @@ section{
   grid-area: section;
   position: relative;
   margin: 10px 1px;
-  width: 455px;
+  width: 570px;
   height: 750px;
   }
   .nome{
-  margin: 15px -35px;
+  margin: 15px 35px;
   font-size: 15px;
   .inputnome{
   width: 450px;
@@ -489,7 +486,7 @@ section{
    }
   }
   .telefone{
-  margin: -10px -35px;
+  margin: -10px 35px;
   font-size: 15px;
   .inputtelefone{
   width: 450px;
@@ -498,7 +495,7 @@ section{
   }
   }
   .email{
-  margin: 20px -35px;
+  margin: 20px 35px;
   font-size: 15px;
   .inputemail{
   width: 450px;
@@ -507,7 +504,7 @@ section{
   }
   }
   .cpf{
-  margin: -10px -35px;
+  margin: -10px 35px;
   font-size: 15px;
   .inputcpf{
   width: 450px;
@@ -516,7 +513,7 @@ section{
    }
   }
   .rg{
-  margin: 20px -35px;
+  margin: 20px 35px;
   font-size: 15px;
   .inputrg{
   width: 450px;
@@ -525,7 +522,7 @@ section{
    }
   }
   .nascimento{
-  margin: 15px -35px;
+  margin: 15px 35px;
   font-size: 15px;
   .inputnascimento{
   width: 450px;
@@ -534,7 +531,7 @@ section{
   }
   }
   .cep{
-  margin: 15px -35px;
+  margin: 15px 35px;
   font-size: 15px;
   .inputcep{
   width: 450px;
@@ -543,7 +540,7 @@ section{
    }
   }
   .endereco{
-  margin: 15px -35px;
+  margin: 15px 35px;
   font-size: 15px;
   .inputendereco{
   width: 450px;
@@ -552,7 +549,7 @@ section{
    }
   }
   .numero{
-  margin: 15px -35px;
+  margin: 15px 35px;
   font-size: 15px;
   .inputnumero{
   width: 450px;
@@ -561,7 +558,7 @@ section{
    }
   }
   .bairro{
-  margin: 10px -35px;
+  margin: 10px 35px;
   font-size: 15px;
   .inputbairro{
   width: 450px;
@@ -570,7 +567,7 @@ section{
    }
   }
   .cidade{
-  margin: 10px -35px;
+  margin: 10px 35px;
   font-size: 15px;
   .inputcidade{
   width: 450px;
@@ -579,7 +576,7 @@ section{
    }
   }
   .estado{
-  margin: 10px -35px;
+  margin: 10px 35px;
   font-size: 15px;
   .inputestado{
   width: 450px;
@@ -589,13 +586,13 @@ section{
   }
   .alert{
     position: absolute;
-    margin: 200px 10px;
+    margin: 200px 80px;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     width: 450px;
-    height: 100px;
+    height: 60px;
     background-color: #151515;
     color: #00FFFF;
     border: 2px solid white;
@@ -603,30 +600,30 @@ section{
     text-align:center;
   }
   .buttonsalvar{
-     margin: 35px -30px;
-     width: 156px;
+     margin: 35px 35px;
+     width: 156px;   
      .cadastrar-responsivo{
      font-size: 15px;
      }
     }
     .buttonlimpar{
-    margin: -55px 115px;
+    margin: -55px 190px;
     width: 154px;
     .limpar-responsivo{
     font-size: 15px;
     }
     }
     .buttonvoltar{
-    margin: 35px 295px;
-    width: 205px;
+    margin: 35px 370px;
     .voltar-responsivo{
     font-size: 15px;
+    width: 150px;
     }
     }
   .footer{
   position: relative;
   margin: 5px 1px;
-  width: 475px;
+  width: 590px;
   height: 100px;  
 }
 }
