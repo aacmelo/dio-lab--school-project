@@ -33,12 +33,12 @@ public class Aluno {
 
     @NotBlank(message = "Cadastro Não Realizado Informe o CPF do Aluno no Campo CPF")
     @Size(min = 14, message = "Digite no Minimo os 14 Caracters no Campo CPF")
-    @Column(name = "CPF", length = 14, nullable = false)
+    @Column(name = "CPF", length = 14, unique = true, nullable = false)
     private String cpf;
 
     @NotBlank(message = "Cadastro Não Realizado Informe o RG do Aluno no Campo RG")
     @Size(min = 12, message = "Digite no Minimo os 12 Caracteres no Campo RG")
-    @Column(name = "RG", length = 12, nullable = false)
+    @Column(name = "RG", length = 12, unique = true, nullable = false)
     private String rg;
 
     @NotBlank(message = "Cadastro Não Realizado Informe a Data de Nascimento do Aluno no Campo Data de Nascimento")

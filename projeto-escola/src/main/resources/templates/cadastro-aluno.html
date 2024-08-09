@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=divice-width, initial-scale=1.0">
     <title>Sistema de Administração Escolar</title>
-    <link th:href="@{/css/cadastro-aluno.css}" rel="stylesheet" type="text/css"/>
+    <link href="../static/css/cadastro-aluno.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<header class="header">
-    <div>
-        <br><p><h2 class="cadastroAluno">Cadastro Aluno</h2></p>
-    </div>
-</header>
-<main>
-    <div class="principal">
-        <aside class="aside">
-            <div class="button">
-                <a th:href="@{cadastro-aluno}"><button type="submit" title="Cadastrar Aluno">Cadastrar</button></a></a><br><br>
-                <a th:href="@{consultar-aluno}"><button type="submit" title="Consultar Aluno">Consultar</button></a><br><br>
-                <a th:href="@{atualizar-aluno}"><button type="submit" title="Atualizar Aluno">Atualizar</button></a><br><br>
-                <a th:href="@{deletar-aluno}"><button type="submit" title="Deletar Aluno">Deletar</button></a><br><br>
+    <main>
+        <header>
+            <div class="cadastro-aluno">
+                <br><p><h2>Cadastro Aluno</h2></p>
+            </div>
+        </header>
+        <aside>
+            <div class="div-button">
+            <a th:href="@{cadastro-aluno}"><button type="submit" class="cadastro-responsivo" title="Cadastrar Aluno">Cadastrar</button></a></a><br><br>
+            <a th:href="@{consultar-aluno}"><button type="submit" class="consultar-responsivo" title="Consultar Aluno">Consultar</button></a><br><br>
+            <a th:href="@{atualizar-aluno}"><button type="submit" class="atualizar-responsivo" title="Atualizar Aluno">Atualizar</button></a><br><br>
+            <a th:href="@{deletar-aluno}"><button type="submit" class="deletar-responsivo" title="Deletar Aluno">Deletar</button></a><br><br>
             </div>
         </aside>
-        <section class="section">
+        <section>
             <div>
                 <a th:href="@{cadastro-aluno}">
                     <span th:if="${mensagem}" class="alert" th:text="${mensagem}"></span>
                 </a>
             </div>
-            <div class="divformulario">
+            <div class="div-formulario">
                 <form th:object="${novoAluno}" th:action="@{/novoaluno}" method="post">
                     <div>
                         <a th:href="@{cadastro-aluno}">
@@ -36,7 +35,7 @@
                         </a>
                     </div>
                     <div class="nome">
-                        <label>Nome:</label><br>
+                        <label class="label">Nome:</label><br>
                         <input type="text" class="inputnome" placeholder="Nome do Aluno" name="nome" field="*{nome}"/>
                     </div>
                     <div>
@@ -64,7 +63,7 @@
                     </div>
                     <div class="cpf">
                         <label>CPF:</label><br>
-                        <input type="text" placeholder="CPF" name="cpf" field="*{cpf}"/><br>
+                        <input type="text" class="inputcpf" placeholder="CPF" name="cpf" field="*{cpf}"/><br>
                     </div>
                     <div>
                         <a th:href="@{cadastro-aluno}">
@@ -73,7 +72,7 @@
                     </div>
                     <div class="rg">
                         <label>RG:</label><br>
-                        <input type="text" placeholder="RG" name="rg" field="*{rg}"/>
+                        <input type="text" class="inputrg" placeholder="RG" name="rg" field="*{rg}"/>
                     </div>
                     <div>
                         <a th:href="@{cadastro-aluno}">
@@ -82,7 +81,7 @@
                     </div>
                     <div class="nascimento">
                         <label>Data de Nascimento:</label><br>
-                        <input type="text" placeholder="Dade de Nascimento" name="dataNascimento" field="*{dataNascimento}"/>
+                        <input type="text" class="inputnascimento" placeholder="Dade de Nascimento" name="dataNascimento" field="*{dataNascimento}"/>
                     </div>
                     <div>
                         <a th:href="@{cadastro-aluno}">
@@ -91,7 +90,7 @@
                     </div>
                     <div class="cep">
                         <label>Cep:</label><br>
-                        <input type="text" placeholder="Cep" name="cep" field="*{cep}"/>
+                        <input type="text" class="inputcep" placeholder="Cep" name="cep" field="*{cep}"/>
                     </div>
                     <div>
                         <a th:href="@{cadastro-aluno}">
@@ -109,7 +108,7 @@
                     </div>
                     <div class="numero">
                         <label>Numero:</label><br>
-                        <input type="text" placeholder="Numero" name="numero" field="*{numero}"/>
+                        <input type="text" class="inputnumero" placeholder="Numero" name="numero" field="*{numero}"/>
                     </div>
                     <div>
                         <a th:href="@{cadastro-aluno}">
@@ -139,22 +138,23 @@
                         <input type="text" class="inputestado" placeholder="Estado" name="estado" field="*{estado}"/>
                     </div>
                     <div class="buttonsalvar">
-                        <button type="submit" title="Cadastrar Aluno">Cadastrar Aluno</button>
+                        <button type="submit" title="Cadastrar Aluno" class="cadastrar-responsivo">Cadastrar Aluno</button>
                     </div>
                     <div class="buttonlimpar">
-                        <button type="reset" title="Limpar Campos">Limpar Campos</button>
+                        <button type="reset" title="Limpar Campos" class="limpar-responsivo">Limpar Campos</button>
                     </div>
                 </form>
             </div>
             <div class="buttonvoltar">
-                <a th:href="@{cadastro-aluno}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
+            <a th:href="@{cadastro-aluno}"><button type="submit" class="voltar-responsivo" title="Voltar a Tela Principal">
+            Voltar a Tela Principal</button></a>
             </div>
         </section>
-    </div>
-</main>
-<footer class="footer">
-    <div>
-    </div>
-</footer>
+        </div>
+       <footer class="footer">
+       <div>
+       </div>
+       </footer>
+    </main>
 </body>
 </html>
