@@ -207,14 +207,212 @@ section{
  cursor: pointer;
  }
 }
-@media(min-width:412px) and (max-width:915px){
+@media(min-width:360px) and (max-width:720px){
   body{
   background-color: black;
-  width: 745px;
-  height: 1679px;
+  width: 347px;
+  height: 1040px;
   display: grid;
-  grid-template-columns: repeat(5,150px);
-  grid-template-rows: repeat(18,92px);
+  grid-template-columns: repeat(3,130px);
+  grid-template-rows: repeat(11,95px);
+  grid-template-areas: "header header header header"
+                       "aside aside aside aside"
+                       "section section section section"
+                       "footer footer footer footer";
+  column-gap: 1px;
+  row-gap: 1px;
+  }
+  main{
+  width: 347px;
+  height: 1040px;
+  }
+  header{
+  grid-area: header;
+  position: relative;
+  margin: 1px 3px;
+  width: 340px;
+  height: 45px;
+  }
+  .cadastro-aluno{
+  margin: -3px -10px;
+  padding-top: 1px;
+  h2{
+  font-size: 15px;
+  margin: -20px;
+  }
+  }
+  aside{
+  grid-area: aside;
+  position: relative;
+  margin: 10px 3px;
+  width: 340px;
+  height: 40px;
+  }
+  .div-button{
+    margin: 1px;
+    height: 25px;
+  .cadastro-responsivo{
+  font-size: 11px;
+  margin-top: 1px; 
+  margin-left: -270px;
+  }
+  .consultar-responsivo{
+  font-size: 11px;
+  margin-top: -38px;
+  margin-left: -70px;
+  }
+  .atualizar-responsivo{
+  font-size: 11px;
+  margin-top: -58px;
+  margin-left: 110px;
+  }
+  .deletar-responsivo{
+  font-size: 11px;
+  margin-top: -77px;
+  margin-left: 270px;
+  }
+  }
+  section{
+  grid-area: section;
+  position: relative;
+  margin: 10px 3px;
+  width: 319px;
+  height: 800px;
+  }
+  .nome{
+  margin: 10px -40px;
+  .inputnome{  
+  width: 330px;
+  height: 30px; 
+   }
+  }
+  .telefone{
+  margin: 10px -40px;
+  .inputtelefone{
+  width: 330px;
+  height: 30px;
+  }
+  }
+  .email{
+  margin: 10px -40px;
+  .inputemail{
+  width: 330px;
+  height: 30px;
+  }
+  }
+  .cpf{
+  margin: 10px -40px;
+  .inputcpf{
+  width: 330px;
+  height: 30px;
+   }
+  }
+  .rg{
+  margin: 10px -40px;
+  .inputrg{
+  width: 330px;
+  height: 30px;
+   }
+  }
+  .nascimento{
+  margin: 10px -40px;
+  .inputnascimento{
+  width: 330px;
+  height: 30px;
+  }
+  }
+  .cep{
+  margin: 10px -40px;
+  .inputcep{
+  width: 330px;
+  height: 30px;
+   }
+  }
+  .endereco{
+  margin: 10px -40px;
+  .inputendereco{
+  width: 330px;
+  height: 30px;
+   }
+  }
+  .numero{
+  margin: 10px -40px;
+  .inputnumero{
+  width: 330px;
+  height: 30px;
+   }
+  }
+  .bairro{
+  margin: 10px -40px;
+  .inputbairro{
+  width: 330px;
+  height: 30px;
+   }
+  }
+  .cidade{
+  margin: 10px -40px;
+  .inputcidade{
+  width: 330px;
+  height: 30px;
+   }
+  }
+  .estado{
+  margin: 10px -40px;
+  .inputestado{
+  width: 330px;
+  height: 30px;
+   }
+  }
+  .alert{
+    position: absolute;
+    margin: 250px 5px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 325px;
+    height: 60px;
+    background-color: #151515;
+    color: #00FFFF;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align:center;
+  }
+  .buttonsalvar{
+   margin: 40px -35px;
+   .cadastrar-responsivo{
+   font-size: 11px;
+   }
+  }
+  .buttonlimpar{
+  margin: -55px 70px;
+  width: 300px;
+  .limpar-responsivo{
+  font-size: 11px;
+  }
+  }
+  .buttonvoltar{
+  margin: 40px 205px;
+  width: 300px;
+  .voltar-responsivo{
+  font-size: 11px;
+  }
+  }
+  .footer{
+  position: relative;
+  margin: 5px 3px;
+  width: 340px;
+  height: 90px;
+  }
+}
+@media(max-width:915px) and (max-height: 412px){
+  body{
+  background-color: black;
+  width: 480px;
+  height: 1065px;
+  display: grid;
+  grid-template-columns: repeat(4,120px);
+  grid-template-rows: repeat(15,70px);
   grid-template-areas: "header header header header"
                        "aside aside aside aside"
                         "section section section section"
@@ -223,401 +421,211 @@ section{
   row-gap: 1px;
   }
   main{
-  width: 745px;
-  height: 1679px;
+    width: 480px;
+    height: 1065px;
   }
   header{
   grid-area: header;
   position: relative;
-  margin: 5px;
-  width: 735px;
-  height: 100px;
+  margin: 5px 1px;
+  width: 475px;
+  height: 70px;
   }
   .cadastro-aluno{
-  margin: -3px 130px;
-  padding-top: 1px;
+  margin: -15px -10px;
+  padding-top: 2px;
   width: 500px;
   height: 95px;
   h2{
-  font-size: 35px;
+  font-size: 20px;
   margin: 10px;
   }
   }
   aside{
   grid-area: aside;
   position: relative;
-  margin: 15px 3px;
-  width: 735px;
-  height: 70px;
-  }
-  .div-button{
-  .cadastro-responsivo{
-  font-size: 20px;
-  margin-top: -20px;
-  margin-left: -550px;
-  }
-  .consultar-responsivo{
-  margin-top: -47px;
-  margin-left: -150px;
-  font-size: 20px;
-  }
-  .atualizar-responsivo{
-  margin-top: -65px;
-  margin-left: 215px;
-  font-size:20px;
-  }
-  .deletar-responsivo{
-  margin-top: -83px;
-  margin-left: 540px;
-  font-size: 20px;
-  }
-  }
-  section{
-  grid-area: section;
-  position: relative;
-  margin: 15px 3px;
-  width: 715px;
-  height: 1300px;
-  }
-  .nome{
-  margin: 20px -5px;
-  .label{
-  font-size: 30px;
-  }
-  .inputnome{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
-   }
-  }
-  .telefone{
-  margin: -10px -5px;
-  font-size: 30px;
-  .inputtelefone{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
-  }
-  }
-  .email{
-  margin: 20px -5px;
-  font-size: 30px;
-  .inputemail{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
-  }
-  }
-  .cpf{
-  margin: -10px -5px;
-  font-size: 30px;
-  .inputcpf{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
-   }
-  }
-  .rg{
-  margin: 20px -5px;
-  font-size: 30px;
-  .inputrg{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
-   }
-  }
-  .nascimento{
-  margin: 15px -5px;
-  font-size: 30px;
-  .inputnascimento{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
-  }
-  }
-  .cep{
-  margin: 15px -5px;
-  font-size: 30px;
-  .inputcep{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
-   }
-  }
-  .endereco{
-  margin: 15px -5px;
-  font-size: 30px;
-  .inputendereco{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
-   }
-  }
-  .numero{
-  margin: 15px -5px;
-  font-size: 30px;
-  .inputnumero{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
-   }
-  }
-  .bairro{
-  margin: 10px -5px;
-  font-size: 30px;
-  .inputbairro{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
-   }
-  }
-  .cidade{
-  margin: 10px -5px;
-  font-size: 30px;
-  .inputcidade{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
-   }
-  }
-  .estado{
-  margin: 10px -5px;
-  font-size: 30px;
-  .inputestado{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
-   }
-  }
-  .buttonsalvar{
-   margin: 65px 1px;
-   .cadastrar-responsivo{
-   font-size: 20px;
-   }
-  }
-  .buttonlimpar{
-  margin: -90px 230px;
-  width: 300px;
-  .limpar-responsivo{
-  font-size: 20px;
-  }
-  }
-  .buttonvoltar{
-  margin: 65px 480px;
-  width: 300px;
-  .voltar-responsivo{
-  font-size: 20px;
-  }
-  }
-  .footer{
-  position: relative;
-  margin: 5px 3px;
-  width: 735px;
-  height: 130px;
-  }
-}
-@media(max-width:915px) and (max-height: 412px){
-  body{
-  background-color: black;
-  width: 850px;
-  height: 1680px;
-  display: grid;
-  grid-template-columns: repeat(6,141px);
-  grid-template-rows: repeat(17,98px);
-  grid-template-areas: "header header header header header"
-                       "aside aside aside aside"
-                        "section section section section"
-                       "footer footer footer footer";
-  column-gap: 1px;
-  row-gap: 1px;
-  }
-  header{
-  grid-area: header;
-  position: relative;
-  margin: 5px;
-  width: 845px;
-  height: 100px;
-  }
-  .cadastro-aluno{
-  margin: -3px 200px;
-  padding-top: 1px;
-  width: 500px;
-  height: 95px;
-  h2{
-  font-size: 35px;
-  margin: 10px;
-  }
-  }
-  aside{
-  grid-area: aside;
-  position: relative;
-  margin: 15px 3px;
-  width: 846px;
+  margin: 15px 1px;
+  width: 475px;
   height: 70px;
   }
   .div-button{
   position: relative;
   .cadastro-responsivo{
-  font-size: 20px;
-  margin-top: -20px;
-  margin-left: -550px;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: -350px;
   }
   .consultar-responsivo{
-  margin-top: -47px;
-  margin-left: -150px;
-  font-size: 20px;
+  font-size: 15px;
+  margin-top: -44px;
+  margin-left: -100px;
   }
   .atualizar-responsivo{
-  margin-top: -65px;
-  margin-left: 215px;
-  font-size:20px;
+  font-size: 15px;
+  margin-top: -63px;
+  margin-left: 150px;
   }
   .deletar-responsivo{
+  font-size: 15px;
   margin-top: -83px;
-  margin-left: 540px;
-  font-size: 20px;
+  margin-left: 370px;
   }
   }
   section{
   grid-area: section;
   position: relative;
-  margin: 10px 3px;
-  width: 826px;
-  height: 1300px;
+  margin: 10px 1px;
+  width: 455px;
+  height: 750px;
   }
   .nome{
-  margin: 20px 50px;
-  font-size: 30px;
+  margin: 15px -35px;
+  font-size: 15px;
   .inputnome{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
+  width: 450px;
+  height: 25px;
+  font-size: 15px;
    }
   }
   .telefone{
-  margin: -10px 50px;
-  font-size: 30px;
+  margin: -10px -35px;
+  font-size: 15px;
   .inputtelefone{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
+  width: 450px;
+  height: 25px;
+  font-size: 15px;
   }
   }
   .email{
-  margin: 20px 50px;
-  font-size: 30px;
+  margin: 20px -35px;
+  font-size: 15px;
   .inputemail{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
+  width: 450px;
+  height: 25px;
+  font-size: 15px;
   }
   }
   .cpf{
-  margin: -10px 50px;
-  font-size: 30px;
+  margin: -10px -35px;
+  font-size: 15px;
   .inputcpf{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
+  width: 450px;
+  height: 25px;
+  font-size: 15px;
    }
   }
   .rg{
-  margin: 20px 50px;
-  font-size: 30px;
+  margin: 20px -35px;
+  font-size: 15px;
   .inputrg{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
+  width: 450px;
+  height: 25px;
+  font-size: 15px;
    }
   }
   .nascimento{
-  margin: 15px 50px;
-  font-size: 30px;
+  margin: 15px -35px;
+  font-size: 15px;
   .inputnascimento{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
+  width: 450px;
+  height: 25px;
+  font-size: 15px;
   }
   }
   .cep{
-  margin: 15px 50px;
-  font-size: 30px;
+  margin: 15px -35px;
+  font-size: 15px;
   .inputcep{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
+  width: 450px;
+  height: 25px;
+  font-size: 15px;
    }
   }
   .endereco{
-  margin: 15px 50px;
-  font-size: 30px;
+  margin: 15px -35px;
+  font-size: 15px;
   .inputendereco{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
+  width: 450px;
+  height: 25px;
+  font-size: 15px;
    }
   }
   .numero{
-  margin: 15px 50px;
-  font-size: 30px;
+  margin: 15px -35px;
+  font-size: 15px;
   .inputnumero{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
+  width: 450px;
+  height: 25px;
+  font-size: 15px;
    }
   }
   .bairro{
-  margin: 10px 50px;
-  font-size: 30px;
+  margin: 10px -35px;
+  font-size: 15px;
   .inputbairro{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
+  width: 450px;
+  height: 25px;
+  font-size: 15px;
    }
   }
   .cidade{
-  margin: 10px 50px;
-  font-size: 30px;
+  margin: 10px -35px;
+  font-size: 15px;
   .inputcidade{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
+  width: 450px;
+  height: 25px;
+  font-size: 15px;
    }
   }
   .estado{
-  margin: 10px 50px;
-  font-size: 30px;
+  margin: 10px -35px;
+  font-size: 15px;
   .inputestado{
-  width: 660px;
-  height: 50px;
-  font-size: 25px;
+  width: 450px;
+  height: 25px;
+  font-size: 15px;
    }
   }
+  .alert{
+    position: absolute;
+    margin: 200px 10px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 450px;
+    height: 100px;
+    background-color: #151515;
+    color: #00FFFF;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align:center;
+  }
   .buttonsalvar{
-     margin: 65px 50px;
+     margin: 35px -30px;
      width: 156px;
      .cadastrar-responsivo{
-     font-size: 20px;
+     font-size: 15px;
      }
     }
     .buttonlimpar{
-    margin: -90px 280px;
+    margin: -55px 115px;
     width: 154px;
     .limpar-responsivo{
-    font-size: 20px;
+    font-size: 15px;
     }
     }
     .buttonvoltar{
-    margin: 65px 540px;
+    margin: 35px 295px;
     width: 205px;
     .voltar-responsivo{
-    font-size: 20px;
+    font-size: 15px;
     }
     }
   .footer{
   position: relative;
-  margin: 5px 3px;
-  width: 846px;
-  height: 130px;
-  }
+  margin: 5px 1px;
+  width: 475px;
+  height: 100px;  
+}
 }
