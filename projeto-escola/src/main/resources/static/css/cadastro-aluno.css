@@ -9,10 +9,7 @@ body{
                       "footer footer footer footer";
  column-gap: 1px;
  row-gap: 1px;
-}
-main{
-  width: 1320px;
-}
+} 
 header{
    grid-area: header;
    margin: -5px 2px;
@@ -61,16 +58,6 @@ section{
    border-radius: 10px;
    color: white;
    padding: 10px;
-}
-.footer{
-   grid-area: footer;
-   position: fixed;
-   margin: 470px 1px;
-   width: 1345px;
-   height: 55px;
-   background-color: #151515;
-   border: 1px solid white;
-   border-radius: 10px;
 }
 .alert{
   position: absolute;
@@ -207,13 +194,54 @@ section{
  cursor: pointer;
  }
 }
+.footer{
+  grid-area: footer;
+  position: fixed;
+  margin: 470px 1px;
+  width: 1345px;
+  height: 55px;
+  background-color: #151515;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.footer-cadastrar{
+  margin: 20px 250px;
+  border-radius: 10px;
+  border:none;
+}
+.footer-cadastrar:hover{
+  background-color:aqua;
+  cursor: pointer;
+}
+.footer-consultar{
+  margin: 20px -50px;
+  border-radius: 10px;
+}
+.footer-consultar:hover{
+  background-color: aqua;
+  cursor: pointer;
+}
+.footer-atualizar{
+  margin: 20px 270px;
+  border-radius: 10px;
+}
+.footer-atualizar:hover{
+  background-color: aqua;
+  cursor: pointer;
+}
+.footer-deletar{
+  margin: 20px -60px;
+  border-radius: 10px;
+}
+.footer-deletar:hover{
+  background-color: aqua;
+  cursor: pointer;
+}
 @media(min-width:360px) and (max-width:720px){
   body{
   background-color: black;
-  width: 347px;
-  height: 1040px;
   display: grid;
-  grid-template-columns: repeat(3,130px);
+  grid-template-columns: repeat(4,85px);
   grid-template-rows: repeat(11,95px);
   grid-template-areas: "header header header header"
                        "aside aside aside aside"
@@ -223,8 +251,8 @@ section{
   row-gap: 1px;
   }
   main{
-  width: 347px;
-  height: 1040px;
+    width: 347px;
+    height: 1040px;
   }
   header{
   grid-area: header;
@@ -356,7 +384,7 @@ section{
   height: 30px;
    }
   }
-  .estado{
+  .estado{  
   margin: 10px -40px;
   .inputestado{
   width: 330px;
@@ -406,8 +434,41 @@ section{
   width: 340px;
   height: 90px;
   }
+  .footer-cadastrar{
+    margin: -150px 10px;
+    border-radius: 10px;
+    border:none;
+  }  
+  .footer-cadastrar:hover{
+    background-color:aqua;
+    cursor: pointer;
+  }
+  .footer-consultar{
+    margin: 35px 5px;
+    border-radius: 10px;
+  }
+  .footer-consultar:hover{
+    background-color: aqua;
+    cursor: pointer;
+  }
+  .footer-atualizar{
+    margin: -57px 190px;
+    border-radius: 10px;
+  }
+  .footer-atualizar:hover{
+    background-color: aqua;
+    cursor: pointer;
+  }
+  .footer-deletar{
+    margin: -57px 275px;
+    border-radius: 10px;
+  }
+  .footer-deletar:hover{
+    background-color: aqua;
+    cursor: pointer;
+  }
 }
-@media(min-width:412px) and (max-width: 915px){
+@media(min-width:720px) and (max-width: 768px){
   body{
   background-color: black;
   width: 595px;
@@ -605,25 +666,58 @@ section{
      .cadastrar-responsivo{
      font-size: 15px;
      }
-    }
-    .buttonlimpar{
+  }
+  .buttonlimpar{
     margin: -55px 190px;
     width: 154px;
     .limpar-responsivo{
     font-size: 15px;
     }
-    }
-    .buttonvoltar{
+  }
+  .buttonvoltar{
     margin: 35px 370px;
     .voltar-responsivo{
     font-size: 15px;
     width: 150px;
     }
-    }
-  .footer{
+  }
+.footer{
   position: relative;
   margin: 5px 1px;
   width: 590px;
   height: 100px;  
+}
+.footer-cadastrar{
+  margin: -150px 50px;
+  border-radius: 10px;
+  border:none;
+}  
+.footer-cadastrar:hover{
+  background-color:aqua;
+  cursor: pointer;
+}
+.footer-consultar{
+  margin: 35px 20px;
+  border-radius: 10px;
+}
+.footer-consultar:hover{
+  background-color: aqua;
+  cursor: pointer;
+}
+.footer-atualizar{
+  margin: -57px 350px;
+  border-radius: 10px;
+}
+.footer-atualizar:hover{
+  background-color: aqua;
+  cursor: pointer;
+}
+.footer-deletar{
+  margin: -57px 500px;
+  border-radius: 10px;
+}
+.footer-deletar:hover{
+  background-color: aqua;
+  cursor: pointer;
 }
 }
