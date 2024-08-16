@@ -173,7 +173,7 @@ section{
  }
 }
 .buttonlimpar{
- margin: -98px 105px;
+ margin: -98px 120px;
  button{
  border-radius: 10px;
  border: none;
@@ -194,18 +194,23 @@ section{
  cursor: pointer;
  }
 }
-.footer{
+footer{
   grid-area: footer;
   position: fixed;
   margin: 470px 1px;
   width: 1345px;
-  height: 55px;
+  height: 90px;
   background-color: #151515;
   border: 1px solid white;
   border-radius: 10px;
 }
+.div-cadastrar{
+  margin: 35px 300px;
+  width: 75px;
+  height: 20px;
+}
 .footer-cadastrar{
-  margin: 20px 250px;
+  margin: 1px 1px;
   border-radius: 10px;
   border:none;
 }
@@ -213,33 +218,60 @@ section{
   background-color:aqua;
   cursor: pointer;
 }
+.div-consultar{
+  margin: -54px 500px;
+  width: 74px;
+  height: 20px;
+}
 .footer-consultar{
-  margin: 20px -50px;
+  margin: -1px 1px;
   border-radius: 10px;
 }
 .footer-consultar:hover{
   background-color: aqua;
   cursor: pointer;
 }
+.div-atualizar{
+  margin: 35px 750px;
+  width: 70px;
+  height: 20px;
+  }
 .footer-atualizar{
-  margin: 20px 270px;
+  margin: -1px 1px;
   border-radius: 10px;
 }
 .footer-atualizar:hover{
   background-color: aqua;
   cursor: pointer;
 }
+.div-deletar{
+  margin: -56px 950px;
+  width: 70px;
+  height: 20px;
+  }
 .footer-deletar{
-  margin: 20px -60px;
+  margin: 1px 5px;
   border-radius: 10px;
 }
 .footer-deletar:hover{
   background-color: aqua;
   cursor: pointer;
 }
-@media(min-width:360px) and (max-width:720px){
+.div-developer{
+  margin: 70px 610px;
+  width: 100px;
+  height: 10px;
+} 
+.developer{
+  margin: 1px 1px;
+  width: 180px;
+  color: white;
+  font-size: 9px;
+}
+@media(min-width:360px) and (max-width:740px){
   body{
   background-color: black;
+  width: 350px;
   display: grid;
   grid-template-columns: repeat(4,85px);
   grid-template-rows: repeat(11,95px);
@@ -250,10 +282,7 @@ section{
   column-gap: 1px;
   row-gap: 1px;
   }
-  main{
-    width: 347px;
-    height: 1040px;
-  }
+
   header{
   grid-area: header;
   position: relative;
@@ -399,7 +428,7 @@ section{
     top: 0;
     bottom: 0;
     width: 325px;
-    height: 60px;
+    height: 95px;
     background-color: #151515;
     color: #00FFFF;
     border: 2px solid white;
@@ -413,66 +442,93 @@ section{
    }
   }
   .buttonlimpar{
-  margin: -55px 70px;
+  margin: -55px 85px;
   width: 300px;
   .limpar-responsivo{
   font-size: 11px;
   }
   }
   .buttonvoltar{
-  margin: 40px 205px;
-  width: 100px;
-
+  margin: 40px 200px;
+  }
   .voltar-responsivo{
   font-size: 11px;
-  width: 120px;
-   }
-  }
-  .footer{
+  width: 80px;
+  } 
+  footer{
   position: relative;
   margin: 5px 3px;
   width: 340px;
-  height: 90px;
-  }
-  .footer-cadastrar{
-    margin: -150px 10px;
-    border-radius: 10px;
-    border:none;
-  }  
-  .footer-cadastrar:hover{
-    background-color:aqua;
-    cursor: pointer;
-  }
-  .footer-consultar{
-    margin: 35px 5px;
-    border-radius: 10px;
-  }
-  .footer-consultar:hover{
-    background-color: aqua;
-    cursor: pointer;
-  }
-  .footer-atualizar{
-    margin: -57px 190px;
-    border-radius: 10px;
-  }
-  .footer-atualizar:hover{
-    background-color: aqua;
-    cursor: pointer;
-  }
-  .footer-deletar{
-    margin: -57px 275px;
-    border-radius: 10px;
-  }
-  .footer-deletar:hover{
-    background-color: aqua;
-    cursor: pointer;
-  }
+  height: 95px;
 }
-@media(min-width:720px) and (max-width: 768px){
+.div-cadastrar{
+  margin: 35px 5px;
+  width: 75px;
+  height: 20px;
+}
+.footer-cadastrar{
+  margin: 2px 1px;
+  border-radius: 10px;
+  border:none;
+}  
+.footer-cadastrar:hover{
+  background-color:aqua;
+  cursor: pointer;
+}
+.div-consultar{
+  margin: -54px 95px;
+  width: 74px;
+  height: 20px;
+}
+.footer-consultar{
+  margin: -1px 1px;
+  border-radius: 10px;
+}
+.footer-consultar:hover{
+  background-color: aqua;
+  cursor: pointer;
+  }
+.div-atualizar{
+  margin: 35px 185px;
+  width: 70px;
+  height: 20px;
+  }  
+.footer-atualizar{
+  margin: -2px 1px;
+  border-radius: 10px;
+  }
+.footer-atualizar:hover{
+  background-color: aqua;
+  cursor: pointer;
+  }
+.div-deletar{
+  margin: -56px 260px;
+  width: 70px;
+  height: 20px;
+  }  
+.footer-deletar{
+  margin: -1px 13px;
+  border-radius: 10px;
+  }
+.footer-deletar:hover{
+  background-color: aqua;
+  cursor: pointer;
+  }
+.div-developer{
+  margin: 75px 130px;
+  width: 90px;
+}  
+.developer{
+  margin: 5px 1px;
+  width: 180px;
+  height: 5px;
+  color: white;
+  font-size: 7px;
+}
+}
+@media(min-width:720px) and (max-width:768px){
   body{
-  background-color: black;
-  width: 595px;
-  height: 1065px;
+  background-color: black; 
   display: grid;
   grid-template-columns: repeat(4,120px);
   grid-template-rows: repeat(15,70px);
@@ -487,7 +543,7 @@ section{
   grid-area: header;
   position: relative;
   margin: 5px 1px;
-  width: 590px;
+  width: 570px;
   height: 70px;
   }
   .cadastro-aluno{
@@ -504,7 +560,7 @@ section{
   grid-area: aside;
   position: relative;
   margin: 15px 1px;
-  width: 590px;
+  width: 570px;
   height: 70px;
   }
   .div-button{
@@ -534,11 +590,11 @@ section{
   grid-area: section;
   position: relative;
   margin: 10px 1px;
-  width: 570px;
+  width: 550px;
   height: 750px;
   }
   .nome{
-  margin: 15px 35px;
+  margin: 15px 20px;
   font-size: 15px;
   .inputnome{
   width: 450px;
@@ -547,7 +603,7 @@ section{
    }
   }
   .telefone{
-  margin: -10px 35px;
+  margin: -10px 20px;
   font-size: 15px;
   .inputtelefone{
   width: 450px;
@@ -556,7 +612,7 @@ section{
   }
   }
   .email{
-  margin: 20px 35px;
+  margin: 20px 20px;
   font-size: 15px;
   .inputemail{
   width: 450px;
@@ -565,7 +621,7 @@ section{
   }
   }
   .cpf{
-  margin: -10px 35px;
+  margin: -10px 20px;
   font-size: 15px;
   .inputcpf{
   width: 450px;
@@ -574,7 +630,7 @@ section{
    }
   }
   .rg{
-  margin: 20px 35px;
+  margin: 20px 20px;
   font-size: 15px;
   .inputrg{
   width: 450px;
@@ -583,7 +639,7 @@ section{
    }
   }
   .nascimento{
-  margin: 15px 35px;
+  margin: 15px 20px;
   font-size: 15px;
   .inputnascimento{
   width: 450px;
@@ -592,7 +648,7 @@ section{
   }
   }
   .cep{
-  margin: 15px 35px;
+  margin: 15px 20px;
   font-size: 15px;
   .inputcep{
   width: 450px;
@@ -601,7 +657,7 @@ section{
    }
   }
   .endereco{
-  margin: 15px 35px;
+  margin: 15px 20px;
   font-size: 15px;
   .inputendereco{
   width: 450px;
@@ -610,7 +666,7 @@ section{
    }
   }
   .numero{
-  margin: 15px 35px;
+  margin: 15px 20px;
   font-size: 15px;
   .inputnumero{
   width: 450px;
@@ -619,7 +675,7 @@ section{
    }
   }
   .bairro{
-  margin: 10px 35px;
+  margin: 10px 20px;
   font-size: 15px;
   .inputbairro{
   width: 450px;
@@ -628,7 +684,7 @@ section{
    }
   }
   .cidade{
-  margin: 10px 35px;
+  margin: 10px 20px;
   font-size: 15px;
   .inputcidade{
   width: 450px;
@@ -637,7 +693,7 @@ section{
    }
   }
   .estado{
-  margin: 10px 35px;
+  margin: 10px 20px;
   font-size: 15px;
   .inputestado{
   width: 450px;
@@ -647,13 +703,13 @@ section{
   }
   .alert{
     position: absolute;
-    margin: 200px 80px;
+    margin: 200px 65px;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     width: 450px;
-    height: 60px;
+    height: 95px;
     background-color: #151515;
     color: #00FFFF;
     border: 2px solid white;
@@ -661,34 +717,39 @@ section{
     text-align:center;
   }
   .buttonsalvar{
-     margin: 35px 35px;
+     margin: 35px 20px;
      width: 156px;   
      .cadastrar-responsivo{
      font-size: 15px;
      }
   }
   .buttonlimpar{
-    margin: -55px 190px;
+    margin: -55px 170px;
     width: 154px;
     .limpar-responsivo{
     font-size: 15px;
     }
   }
   .buttonvoltar{
-    margin: 35px 370px;
+    margin: 35px 320px;
     .voltar-responsivo{
     font-size: 15px;
     width: 150px;
     }
   }
-.footer{
+footer{
   position: relative;
   margin: 5px 1px;
-  width: 590px;
+  width: 570px;
   height: 100px;  
 }
+.div-cadastrar{
+  margin: 40px 65px;
+  width: 75px;
+  height: 20px;
+}
 .footer-cadastrar{
-  margin: -150px 50px;
+  margin: 2px 1px;
   border-radius: 10px;
   border:none;
 }  
@@ -696,28 +757,53 @@ section{
   background-color:aqua;
   cursor: pointer;
 }
+.div-consultar{
+  margin: -60px 195px;
+  width: 74px;
+  height: 20px;
+}
 .footer-consultar{
-  margin: 35px 20px;
+  margin: -1px 1px;
   border-radius: 10px;
 }
 .footer-consultar:hover{
   background-color: aqua;
   cursor: pointer;
 }
+.div-atualizar{
+  margin: 38px 330px;
+  width: 70px;
+  height: 20px;
+  }
 .footer-atualizar{
-  margin: -57px 350px;
+  margin: -1px 1px;
   border-radius: 10px;
 }
 .footer-atualizar:hover{
   background-color: aqua;
   cursor: pointer;
 }
+.div-deletar{
+  margin: -60px 450px;
+  width: 70px;
+  height: 20px;
+  }  
 .footer-deletar{
-  margin: -57px 500px;
+  margin: -1px 10px;
   border-radius: 10px;
 }
 .footer-deletar:hover{
   background-color: aqua;
   cursor: pointer;
+}
+.div-developer{
+  margin: 85px 250px;
+  width: 90px;
+}  
+.developer{
+  margin: 1px 1px;
+  width: 180px;
+  color: white;
+  font-size: 7px;
 }
 }

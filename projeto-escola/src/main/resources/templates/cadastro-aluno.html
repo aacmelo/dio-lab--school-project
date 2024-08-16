@@ -1,4 +1,4 @@
-    <!DOCTYPE>
+<!DOCTYPE>
 <html xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
@@ -143,20 +143,29 @@
                     <div class="buttonlimpar">
                         <button type="reset" title="Limpar Campos" class="limpar-responsivo">Limpar Campos</button>
                     </div>
+                    <div class="buttonvoltar">
+                    <a th:href="@{cadastro-aluno}"><button type="submit" class="voltar-responsivo" title="Voltar a Tela Principal">
+                    Tela Principal</button></a>
+                    </div>
                 </form>
-            </div>
-            <div class="buttonvoltar">
-            <a th:href="@{cadastro-aluno}"><button type="submit" class="voltar-responsivo" title="Voltar a Tela Principal">
-            Tela Principal</button></a>
             </div>
         </div>
         </section>
-     <footer class="footer">
-     <div class="button-footer">
+     <footer>
+     <div class="div-cadastrar">
      <a th:href="@{cadastro-aluno}"><button type="submit" title="Cadastrar Aluno" class="footer-cadastrar">Cadastrar</button></a>
+     </div>
+     <div class="div-consultar">
      <a th:href="@{consultar-aluno}"><button type="submit" title="Consultar Aluno" class="footer-consultar">Consultar</button></a>
+     </div>
+     <div class="div-atualizar">
      <a th:href="@{atualizar-aluno}"><button type="submit" title="Atualizar Aluno" class="footer-atualizar">Atualizar</button></a> 
+     </div>
+     <div class="div-deletar">
      <a th:href="@{deletar-aluno}"><button type="submit" title="Deletar Aluno" class="footer-deletar">Deletar</button></a>   
+     </div>
+     <div class="div-developer">
+     <p class="developer"><strong>Developer André Melo &reg</strong></p>
      </div>
      </footer>
     </main>
