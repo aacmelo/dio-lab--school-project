@@ -30,7 +30,7 @@ aside{
    margin: 105px 2px;
    text-align: center;
    width: 130px;
-   height: 355px;
+   height: 340px;
    position: fixed;
    background-color: #0B0B3B;
    border: 1px solid white;
@@ -52,7 +52,7 @@ section{
    position: fixed;
    margin: 105px 140px;
    width: 1185px;
-   height: 335px;
+   height: 320px;
    background-color: #240B3B;
    border: 1px solid white;
    border-radius: 10px;
@@ -197,9 +197,9 @@ section{
 footer{
   grid-area: footer;
   position: fixed;
-  margin: 470px 1px;
+  margin: 455px 1px;
   width: 1345px;
-  height: 90px;
+  height: 75px;
   background-color: #151515;
   border: 1px solid white;
   border-radius: 10px;
@@ -210,7 +210,7 @@ footer{
   height: 20px;
 }
 .footer-cadastrar{
-  margin: 1px 1px;
+  margin: -10px 1px;
   border-radius: 10px;
   border:none;
 }
@@ -219,7 +219,7 @@ footer{
   cursor: pointer;
 }
 .div-consultar{
-  margin: -54px 500px;
+  margin: -65px 500px;
   width: 74px;
   height: 20px;
 }
@@ -232,7 +232,7 @@ footer{
   cursor: pointer;
 }
 .div-atualizar{
-  margin: 35px 750px;
+  margin: 45px 750px;
   width: 70px;
   height: 20px;
   }
@@ -245,7 +245,7 @@ footer{
   cursor: pointer;
 }
 .div-deletar{
-  margin: -56px 950px;
+  margin: -65px 950px;
   width: 70px;
   height: 20px;
   }
@@ -258,7 +258,7 @@ footer{
   cursor: pointer;
 }
 .div-developer{
-  margin: 70px 610px;
+  margin: 75px 610px;
   width: 100px;
   height: 10px;
 } 
@@ -282,7 +282,6 @@ footer{
   column-gap: 1px;
   row-gap: 1px;
   }
-
   header{
   grid-area: header;
   position: relative;

@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Administração Escolar</title>
-    <link th:href="@{/css/atualizar-aluno.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{css/atualizar-aluno.css}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<header class="header">
+<header>
     <div>
         <br><p><h2 class="consultarAluno">Atualizar Aluno</h2></p>
     </div>
 </header>
 <main>
-    <div class="principal">
-        <aside class="aside">
-            <div class="button">
-                <a th:href="@{cadastro-aluno}"><button type="submit" title="Cadastrar Aluno">Cadastrar</button></a></a><br><br>
-                <a th:href="@{consultar-aluno}"><button type="submit" title="Consultar Aluno">Consultar</button></a><br><br>
-                <a th:href="@{atualizar-aluno}"><button type="submit" title="Atualizar Aluno">Atualizar</button></a><br><br>
-                <a th:href="@{deletar-aluno}"><button type="submit" title="Deletar Aluno">Deletar</button></a><br><br>
-            </div>
+    <aside>
+        <div class="div-button">
+            <a th:href="@{cadastro-aluno}"><button type="submit" title="Cadastrar Aluno">Cadastrar</button></a><br><br>
+            <a th:href="@{consultar-aluno}"><button type="submit" title="Consultar Aluno">Consultar</button></a><br><br>
+            <a th:href="@{atualizar-aluno}"><button type="submit" title="Atualizar Aluno">Atualizar</button></a><br><br>
+            <a th:href="@{deletar-aluno}"><button type="submit" title="Deletar Aluno">Deletar</button></a><br><br>
+        </div>
         </aside>
-        <section class="section">
+        <section>
             <div class="divtabela">
                 <div class="tabela">
                     <table>
@@ -65,14 +64,23 @@
                     </table>
                 </div>
             </div>
-            <div class="buttonvoltar">
-                <a th:href="@{/cadastro-aluno}"><button type="submit" title="Voltar a Tela Principal">Voltar a Tela Principal</button></a>
-            </div>
         </section>
-    </div>
 </main>
-<footer class="footer">
-    <div>
+<footer>
+    <div class="div-cadastrar">
+    <a th:href="@{cadastro-aluno}"><button type="submit" title="Cadastrar Aluno">Cadastrar</button></a>
+    </div>
+    <div class="div-consultar">
+    <a th:href="@{consultar-aluno}"><button type="submit" title="Consultar Aluno">Consultar</button></a>    
+    </div>
+    <div class="div-atualizar">
+    <a th:href="@{atualizar-aluno}"><button type="submit" title="Atualizar Aluno">Atualizar</button></a>
+    </div>
+    <div class="div-deletar">
+    <a th:href="@{deletar-aluno}"><button type="submit" title="Deletar Aluno">Deletar</button></a>
+    </div>
+    <div class="div-developer">
+    <p class="developer"><strong>Developer André Melo &reg</strong></p> 
     </div>
 </footer>
 </body>
